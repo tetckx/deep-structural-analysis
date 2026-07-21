@@ -19,7 +19,6 @@ version: 1.12.1
 ---
 
 <!--
-Author: happy_chen
 版本策略 (Semver-like):
 - 主版本 (X.0.0): 结构性重构、向后不兼容变更、输出格式根本变化
 - 次版本 (X.Y.0): 新增独立机制（新检查条目、新协议分支、新质量标准、重写现有机制）
@@ -580,7 +579,7 @@ these are potential high-leverage intervention points.
 | No structural tools applied | Misses the systemic dynamics |
 | Conclusions without time horizons | Useless for decision-making |
 | **Labeling as Analysis** | "从心理学角度来看，人有恐惧心理。" This is naming a lens, not applying it. A real analysis would specify: *what* fear mechanism, triggered by *what* specific condition, producing *what* observable behavior, supported by *which* research finding. If you can't specify the mechanism, you haven't analyzed. |
-| **中英混杂** | 输出应以中文为主。英文仅可用于：(1) 无标准中文翻译的专有名词（Rosa, Meadows, Cynefin, Bourdieu, Ostrom），(2) 工具/模型名称首次出现时附中文解释。常见概念必须用中文——说"杠杆点"不说"leverage point"，说"反馈循环"不说"feedback loop"，说"确认偏误"不说"confirmation bias"。执行摘要必须全中文，零不必要英文。模板标题（核心发现、分层影响、置信度说明、关键分歧等）严禁使用英文版本。**如需切换为全英文输出，修改 config.yaml 中 `language: en`。** |
+| **中英混杂** | 输出应以中文为主。英文仅可用于：(1) 无标准中文翻译的专有名词（Rosa, Meadows, Cynefin, Bourdieu, Ostrom），(2) 工具/模型名称首次出现时附中文解释。常见概念必须用中文——说"杠杆点"不说"leverage point"，说"反馈循环"不说"feedback loop"，说"确认偏误"不说"confirmation bias"。执行摘要必须全中文，零不必要英文。模板标题（核心发现、分层影响、置信度说明、关键分歧等）严禁使用英文版本。 |
 | **透镜未显式命名** | 深度声明中只写了透镜数量（"3透镜"），但未在正文中逐一列出透镜名。模型可能已隐式应用透镜但读者无法判断。违例：只写"3透镜"。正确：写"3透镜：经济学 / 制度分析 / 心理学"。 |
 | **置信度说明被跳过** | 即使"所有结论均有良好支撑"，也必须保留"⚠️ 置信度说明"板块并写"当前分析依赖的数据基本完整，结论置信度总体良好，无特殊标记项。"——不可省略板块本身。省略会使读者怀疑模型在隐瞒不确定性。 |
 | **简短回答超限** | 简短回答（Refusal handling 或 Multi-question triage 中的非深度问题）必须 ≤100 个中文字符。超出 → 要么压缩，要么声明升级为聚焦深度。 |

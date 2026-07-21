@@ -1,70 +1,52 @@
-# Deep Structural Analysis — Module Config / 模块加载配置
-# Default: all enabled. Disable unused modules to save context.
-# 默认：全家桶。按需关闭不需要的模块以节省上下文。
-# Changes take effect immediately. 修改后立即生效。
+# Deep Structural Analysis — 模块加载配置
+# 默认：全家桶（全部启用）。按需关闭不需要的模块以节省上下文。
+# 修改后立即生效，无需重启。
 
 version: "1.0"
 
 # ============================================================
-# Depth Control / 深度控制
+# 深度控制
 # ============================================================
 depth:
-  # Focused(3-4) | Standard(5-7) | Comprehensive(7-9)
-  # 默认分析深度
+  # 默认分析深度：Focused(3-4透镜) | Standard(5-7) | Comprehensive(7-9)
   default: Standard
 
-  # Auto-degrade to Lite for Clear/Complicated domains
   # 自动降级：Clear/Complicated 域是否自动切换到 lite 模式
   auto_degrade_to_lite: true
 
 # ============================================================
-# Output Language / 输出语言
-# zh = Chinese (default) | en = English
-# 默认中文。改为 en 即切换为全英文输出。
-# ============================================================
-language: zh
-
-# ============================================================
-# Extensions / 扩展模块
-# enabled: true = load, false = skip / 加载 / 跳过
+# 扩展模块（enabled: true = 加载, false = 跳过）
 # ============================================================
 extensions:
 
-  # Batch + multi-question triage — N>=5 items or multiple unrelated questions
-  # 批处理+多问题分流
+  # 批处理+多问题分流 — N≥5 相关项或同时多个不相关问题时加载
   batch_analysis:
     enabled: true
 
-  # Exit + degradation — "简单点" / "说人话" or refused clarification
-  # 退出+降级协议
+  # 退出+降级协议 — "说人话"/"简单点" 或拒绝澄清时加载
   exit_protocols:
     enabled: true
 
-  # L1→L2→L3 cognitive progression — "第一感觉是..."
-  # 认知递进协议
+  # 认知递进协议 — L1→L2→L3，"第一感觉是..." 时加载
   layered_protocol:
     enabled: true
 
-  # Trauma-sensitive + over-abstraction — violence/discrimination topics
-  # 创伤敏感+过度抽象化
+  # 创伤敏感+过度抽象化 — 涉暴力/歧视/具体伤害时加载
   trauma_sensitive:
     enabled: true
 
-  # Interactive analysis — "先聊聊" / "探讨一下"
-  # 对话式分析
+  # 对话式分析 — "先聊聊"/"探讨一下" 时加载
   interactive:
     enabled: true
 
-  # Offline fallback — search unavailable (recommend keeping enabled)
-  # 离线回退（建议保持启用）
+  # 离线回退 — 搜索不可用时自动加载（建议保持启用）
   offline_fallback:
     enabled: true
 
 # ============================================================
-# Presets / 预设方案
-# Uncomment to activate / 取消注释以激活
+# 预设方案（取消注释以激活）
 # ============================================================
-# Light: core + exit only / 轻量方案
+# 轻量方案：仅核心框架 + 退出协议
 # extensions:
 #   batch_analysis:   { enabled: false }
 #   exit_protocols:    { enabled: true  }
@@ -73,7 +55,7 @@ extensions:
 #   interactive:       { enabled: false }
 #   offline_fallback:  { enabled: true  }
 
-# Quick: core only / 速查方案
+# 速查方案：仅核心框架，所有扩展关闭
 # extensions:
 #   batch_analysis:   { enabled: false }
 #   exit_protocols:    { enabled: false }

@@ -1,42 +1,45 @@
-﻿---
+---
 name: deep-structural-analysis/interactive
-description: Interactive analysis protocol 鈥?alternative to full one-shot delivery. Load when user says "鍏堣亰鑱? / "鎺㈣涓€涓? / "涓€姝ユ鏉? / "explore this with me" or topic is genuinely exploratory.
+description: Interactive analysis protocol — alternative to full one-shot delivery. Load when user says "先聊聊" / "探讨一下" / "一步步来" / "explore this with me" or topic is genuinely exploratory.
 version: 1.0.1
 ---
 
-# Interactive Analysis Protocol锛堝璇濆紡鍒嗘瀽 路 鍙€夛級
+# Interactive Analysis Protocol（对话式分析 · 可选）
 
-Alternative to full one-shot delivery. Activates when user says "鍏堣亰鑱?/"鎺㈣涓€涓?/"涓嶇敤澶寮?/"涓€姝ユ鏉? 鈥?or when the topic is exploratory.
+Alternative to full one-shot delivery. Activates when user says "先聊聊"/"探讨一下"/"不用太正式"/"一步步来" — or when the topic is exploratory.
 
 ## Phase 1: Direction Proposal
 After decomposition but before research, present 3-4 possible lens selection directions with one-line rationales:
-- e.g. "渚ч噸缁忔祹瀛?鍒跺害鍒嗘瀽鐨勬不鐞嗚瑙?
-- "渚ч噸浜虹被瀛?鎯呮劅鏀挎不鐨勬枃鍖栬瑙?
-- "渚ч噸绯荤粺璁?鏃堕棿鎬х殑杞瀷瑙嗚"
+- e.g. "侧重经济学+制度分析的治理视角"
+- "侧重人类学+情感政治的文化视角"
+- "侧重系统论+时间性的转型视角"
 
-Ask: "杩欏嚑涓柟鍚戜腑鍝釜鏈€鍊煎緱浼樺厛灞曞紑锛?
+Ask: "这几个方向中哪个最值得优先展开？"
 
-> **淇℃伅鍩虹璇存槑**锛氫氦浜掑紡妯″紡鐨?L1 鍜?L2 闃舵鍩轰簬棰勮缁冪煡璇嗚繘琛岋紝涓嶈Е鍙戝疄鏃舵悳绱€傛柟鍚戠‘璁ゅ悗锛圠3 鎴栧閲忎氦浠樼殑绗笁涓€忛暅璧凤級锛屽惎鍔ㄦ悳绱㈠苟浜嬪疄缁戝畾鍚庣画鍒嗘瀽銆?
+> **信息基础说明**：交互式模式的 L1 和 L2 阶段基于预训练知识进行，不触发实时搜索。方向确认后（L3 或增量交付的第三个透镜起），启动搜索并事实绑定后续分析。
+
 ## Phase 2: Incremental Delivery
-After each lens/tool is applied, pause and ask: "杩欎釜鏂瑰悜鏄惁鍊煎緱娣卞叆锛熻繕鏄垏鎹㈠埌涓嬩竴涓€忛暅锛? User controls depth allocation 鈥?can go deep on one, skip another.
+After each lens/tool is applied, pause and ask: "这个方向是否值得深入？还是切换到下一个透镜？" User controls depth allocation — can go deep on one, skip another.
 
 ## Phase 3: On-Demand Synthesis
-After user signals completion (or pre-agreed number of lenses), deliver compact synthesis. **绱у噾缁煎悎鏍煎紡**: 鏍稿績鍙戠幇锛?-3鍙ワ級+ 鍒嗗眰褰卞搷琛ㄣ€傚闀滃叡璇嗐€佺疆淇″害璇存槑銆佸叧閿垎姝с€丮eadows 鏉犳潌濡傜敤鎴峰湪瀵硅瘽涓湭瑙﹀強鍙渷鐣ャ€傚畬鏁存墽琛屾憳瑕佷綔涓哄彲閫夐」鈥斺€旂敤鎴疯"鍑哄畬鏁存憳瑕?鍗冲彲鑾峰彇銆?
+After user signals completion (or pre-agreed number of lenses), deliver compact synthesis. **紧凑综合格式**: 核心发现（2-3句）+ 分层影响表。多镜共识、置信度说明、关键分歧、Meadows 杠杆如用户在对话中未触及可省略。完整执行摘要作为可选项——用户说"出完整摘要"即可获取。
+
 ## Constraint
 Sacrifices analytical completeness for conversational depth. Appropriate for exploration, not for decision-support requiring full cross-validation. Does NOT replace standard protocol.
 
-> **鍗囩骇璺緞**锛氱敤鎴峰湪浜や簰寮忔ā寮忎腑闅忔椂鍙互璇?鍑哄畬鏁村垎鏋?鎴?鎸夋爣鍑嗘ā寮忔潵"銆傛鏃朵笉鍐嶉€愰€忛暅鏆傚仠锛屾寜鐓у綋鍓嶅凡纭鐨勬柟鍚戠户缁畬鎴愬墿浣欓€忛暅锛屾渶鍚庤緭鍑烘爣鍑嗘墽琛屾憳瑕併€?
+> **升级路径**：用户在交互式模式中随时可以说"出完整分析"或"按标准模式来"。此时不再逐透镜暂停，按照当前已确认的方向继续完成剩余透镜，最后输出标准执行摘要。
+
 ## Compatibility with Layered Protocol
 
-If both Interactive Mode AND Layered Protocol trigger simultaneously (user says "鍏堣亰鑱? while surface narrative is highly misleading):
+If both Interactive Mode AND Layered Protocol trigger simultaneously (user says "先聊聊" while surface narrative is highly misleading):
 
-- **Layered Protocol provides the internal structure** (L1鈫扡2鈫扡3 progression)
+- **Layered Protocol provides the internal structure** (L1→L2→L3 progression)
 - **Interactive Mode provides the delivery rhythm** (pause after each layer for user input)
 
-Round 1: Output L1 (surface impression). Ask "杩欐槸甯歌鐨勭湅娉曗€斺€旈渶瑕佹垜鐢ㄦ煇涓绉戦€忛暅鎸戞垬涓€涓嬪悧锛?
-Round 2: If yes, output L2 (single-lens challenge). Ask "杩欎釜鏂瑰悜鍊煎緱娣卞叆鍚楋紵杩樻槸鎹釜閫忛暅锛?
-   - **鑻ョ敤鎴烽€夋嫨"鎹釜閫忛暅"**锛氬洖鍒?L2锛岀敤鐢ㄦ埛鎸囧畾鐨勫彟涓€涓€忛暅鍐嶅仛涓€娆″崟閫忛暅鎸戞垬銆傝繛缁袱娆?鎹釜閫忛暅"鍚庯紝寤鸿"鏄惁鐩存帴鐢ㄥ閫忛暅鍒嗘瀽锛?
+Round 1: Output L1 (surface impression). Ask "这是常见的看法——需要我用某个学科透镜挑战一下吗？"
+Round 2: If yes, output L2 (single-lens challenge). Ask "这个方向值得深入吗？还是换个透镜？"
+   - **若用户选择"换个透镜"**：回到 L2，用用户指定的另一个透镜再做一次单透镜挑战。连续两次"换个透镜"后，建议"是否直接用多透镜分析？"
 Round 3: If yes, output L3 (full multi-lens). Offer full Executive Summary.
 
-In Interactive+Layered mode, defer Phase 2 web search until user confirms direction after L2 鈥?this avoids wasting search on a direction the user may reject. Bind facts after direction is confirmed.
+In Interactive+Layered mode, defer Phase 2 web search until user confirms direction after L2 — this avoids wasting search on a direction the user may reject. Bind facts after direction is confirmed.
 
