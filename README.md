@@ -1,144 +1,100 @@
-# Deep Structural Analysis
+﻿**Read this in other languages:** [:us: English](README.en.md)
 
-> 跨学科深度结构分析技能 · Multi-Perspective Structural Analysis for Complex Questions  
-> **v1.12.1+** · Progressive Architecture · 608-core + 250-extensions
+# Deep Structural Analysis — 使用须知
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.12.1-green.svg)](SKILL.md)
-
-A disciplined, cross-disciplinary analytical framework for complex social, economic, and systemic questions. Uses web search for factual grounding, applies multiple disciplinary lenses with mandatory cross-validation, and delivers stratified output with explicit confidence calibration.
-
-**Not a chatbot. Not a prompt template. An analytical operating system.**
+> 跨学科深度结构分析技能。将研讨会方法论编码为可复用指令集。
+> 当前核心 v1.12.1+ · 渐进式架构 · 默认全家桶加载 · 核心 608 行 + 扩展 250 行
 
 ---
 
-## Quick Install
+## 这是什么
 
-Place the entire directory in your OpenCode skills folder:
+一个 AI 分析框架。当面对复杂社会/经济/制度问题时：
+
+1. **搜索事实** — 不是凭空推测
+2. **多透镜交叉验证** — 强制至少一个非舒适区透镜，防止经济-政治单轴论证
+3. **应用结构工具** — 二六二分布、不对称检测、激励映射等 8 个工具
+4. **元认知自检** — 7 项硬约束：敌对测试、数据审计、盲点验证、价值透明化等
+5. **分层交付** — 系统-制度-个体 × 三个时间维度
+6. **伦理敏感性** — 创伤议题内置五项保护约束，反淡化机制防止分析失去锐度
+
+输出格式：执行摘要（必出）→ 详细分析（按需）→ 可降级到折叠/超折叠模式。
+
+---
+
+## 何时使用
+
+| 用 | 不用 |
+|----|------|
+| 复杂社会/经济/制度问题 | 简单事实查询 |
+| 涉及多利益群体、系统性矛盾 | 单一领域、可一句话回答 |
+| 需要跨学科视角 | 纯技术/代码/数学问题 |
+| "深度分析"、"多角度"、"结构性" | "总结一下"、"翻译"、"天气" |
+
+Clear/Complicated 域自动降级到 Lite（2-3透镜，仅执行摘要）。Complex/Chaotic 域才展开完整框架。
+
+---
+
+## 快速开始
 
 ```
-~/.config/opencode/skills/deep-structural-analysis/
+用户：深度分析一下为什么中国劳动法执行这么难
+
+→ 触发守卫：识别为 Governance/Compliance
+→ 复杂度：Complex
+→ 搜索事实 → 选 6-7 透镜（含反惯性强制人文透镜）
+→ 应用 2-3 工具（不对称检测+激励映射+路径依赖）
+→ 元认知自检 → 输出执行摘要
 ```
 
-Or load the skill explicitly in your session. All extensions are loaded on-demand based on trigger conditions — no manual configuration needed for defaults.
+---
+
+## 输出语言
+
+默认：**中文**。所有章节标题、表格标签、正文均为中文。英文仅用于无标准中文翻译的专有名词。
+
+切换为全英文输出，编辑 `config.yaml`：
+
+```yaml
+language: en
+```
 
 ---
 
-## What It Does
+## 透镜速查
 
-| Step | Action |
-|------|--------|
-| Phase 1 | Decompose the question — surface → structural → micro → temporal |
-| Phase 2 | Web search for factual grounding (mandatory) |
-| Phase 3 | Apply 3-12 disciplinary lenses across Foundation / Human / Structure categories |
-| Phase 4 | Apply 2-3 structural tools (二六二, Asymmetry Detection, Reflexivity, etc.) |
-| Phase 5 | Synthesize with cross-validation, divergence mapping, blind spot audit, Meadows leverage |
+| 类别 | 透镜 | 定量 |
+|------|------|------|
+| 基础 | 认识论、系统论、历史、时间性 | 1-2 |
+| 人文 | 心理学、社会学、人类学、情感 | 1-2（反惯性强制） |
+| 结构 | 经济学、政治学、制度分析、技术研究、地理 | 1-3 |
 
-**Output**: Executive Summary → Detailed Analysis (on demand) → Collapsed/Ultra-Collapsed (degradable)
+强制规则：经济/政策话题不得跳过人文透镜。当前事件必须包含历史透镜。
 
 ---
 
-## Architecture
+## 目录
 
 ```
 deep-structural-analysis/
-├── SKILL.md                         Core framework (608 lines)
-├── config.yaml                      Module config (all enabled by default)
-├── lite/SKILL.md                    Auto-degrade target (Clear/Complicated)
-├── extensions/                      On-demand modules (6 files, 250 lines)
-│   ├── trauma-sensitive.md          Trauma-aware analysis + over-abstraction check
-│   ├── exit-protocols.md            Degradation + refusal handling
-│   ├── batch-analysis.md            Batch processing + multi-question triage
-│   ├── offline-fallback.md          Structured prior knowledge (10 frameworks)
-│   ├── interactive.md               Conversational analysis mode
-│   └── layered-protocol.md          L1→L2→L3 cognitive progression
-├── docs/
-│   ├── SKILL构建全记录.md             Complete build history
-│   ├── UPDATELOG.md                 Changelog
-│   └── 极限测试全集.md               10 extreme test cases + retrospective
-└── config.yaml                      Toggle modules on/off
-```
-
-**Progressive Depth**: Core loads always. Extensions load on trigger. Clear/Complicated domains auto-degrade to Lite. Complex/Chaotic domains load core + extensions as needed.
-
----
-
-## Key Features
-
-### 13 Disciplinary Lenses (3 categories)
-- **Foundation** (1-2): Epistemology, Systems Theory, History, Temporality
-- **Human** (1-2): Psychology, Sociology, Anthropology, Affect/Emotional Politics
-- **Structure** (1-3): Economics, Political Science, Institutional Analysis, Technology Studies, Geography
-
-### 8 Structural Tools
-二六二 Distribution · 80/20 Principle · Adaptive Cycle · Path Dependency · Asymmetry Detection · Incentive Mapping · Capital Type Matrix · Reflexivity Analysis
-
-### 7 Metacognitive Checks
-Adversarial test · Data-dependence audit · Blind-spot verification · Temporal bias check · Dimension coverage · Normative stance · Over-abstraction check
-
-### Quality Standards
-- **Anti-inertia**: Forces at least one Human lens on economic/policy topics
-- **History mandatory**: Current events/policy/trends → History lens required
-- **Trauma-sensitive**: 5 constraints + anti-dilution for systemic violence topics
-- **Language**: Chinese output, English only for proper nouns without standard translations
-- **Confidence calibration**: Every conclusion tagged with data source and confidence level
-
-### Degradation Protocol
-Full Analysis → Collapsed (4 items) → Ultra-Collapsed (3 sentences) → Short answer (≤100 chars)
-
----
-
-## Tested Limits
-
-This skill has been stress-tested through **10 extreme test cases** (see docs/极限测试全集.md):
-
-| # | Test | Upper Limit Tested |
-|---|------|-------------------|
-| 1 | Self-referential analysis (analyzer = analyzed) | Reflexivity, positionality |
-| 2 | Trauma analysis with protection layer off | Ethical judgment precision |
-| 3 | Concept resisting its own analysis (Love) | Cross-lens incommensurability |
-| 4 | Information vacuum with pseudo-precision | Honesty under data insufficiency |
-| 5 | Metacognition analyzing itself | Self-reference paradox |
-| 6 | Conflicting protocol requirements (Silence) | Protocol conflict resolution |
-| 7 | Real-time feedback loop (Public opinion trial) | Reflexivity acceleration |
-| 8 | Self-negation (When NOT to use) | Harm scenario identification |
-| 9 | Value incommensurability (Justice) | Forced choice under conflict |
-| 10 | Simulation hypothesis (Knowledge) | Epistemological ultimate limit |
-
-**Core finding**: The skill's ceiling is not its rule system — rules provide the skeleton. The model's judgment, reflexivity, and honesty fill in the flesh at the boundary where rules end.
-
----
-
-## Configuration
-
-Edit `config.yaml` to toggle modules:
-
-```yaml
-depth:
-  default: Standard          # Focused | Standard | Comprehensive
-  auto_degrade_to_lite: true # Clear/Complicated → Lite
-
-extensions:
-  batch_analysis:    true
-  exit_protocols:    true
-  layered_protocol:  true
-  trauma_sensitive:  true
-  interactive:       true
-  offline_fallback:  true
+├── SKILL.md                   核心框架（608行）
+├── config.yaml                模块配置
+├── README.en.md                  English
+├── lite/SKILL.md              v2.0.1 精简版
+├── extensions/                6个按需扩展（250行）
+│   ├── trauma-sensitive.md    v1.0.3 创伤敏感
+│   ├── exit-protocols.md      v1.0.2 降级协议
+│   ├── batch-analysis.md      v1.0.2 批处理
+│   ├── offline-fallback.md    v1.1.1 离线框架
+│   ├── interactive.md         v1.0.1 对话式
+│   └── layered-protocol.md    v1.0.1 认知递进
+└── docs/                      文档
 ```
 
 ---
 
-## Version History
+## 回滚
 
-From v1.0.0 (initial framework, 397 lines) to v1.12.1 (progressive architecture, 608-core + 250-extensions). 15 major iterations. See docs/UPDATELOG.md for full changelog.
-
----
-
-## License
-
-MIT — use, modify, distribute freely. Attribution appreciated.
-
----
-
-*Built through 15 versions, 10 extreme test cases, 8 mechanism test cases, 5 self-tests, and 20+ Zhihu real-world validations. The framework is complete; the model is the analyst.*
+```powershell
+Copy-Item backups\SKILL.v1.12.1.latest.backup.md SKILL.md
+```
