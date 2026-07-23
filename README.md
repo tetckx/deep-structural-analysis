@@ -3,7 +3,7 @@
 # Deep Structural Analysis — 使用须知
 
 > 跨学科深度结构分析技能。将研讨会方法论编码为可复用指令集。
-> 当前核心 v1.12.1+ · 渐进式架构 · 默认全家桶加载 · 核心 608 行 + 扩展 250 行
+> 当前核心 v1.12.1+ · 渐进式架构 · 默认全家桶加载 · 核心 ~740 行 + 6 扩展 · 11 道极限测试 · 全工具池透镜化
 
 ---
 
@@ -13,7 +13,7 @@
 
 1. **搜索事实** — 不是凭空推测
 2. **多透镜交叉验证** — 强制至少一个非舒适区透镜，防止经济-政治单轴论证
-3. **应用结构工具** — 二六二分布、不对称检测、激励映射等 8 个工具
+3. **应用结构工具** — 三向、不对称检测、激励映射等 8 个工具
 4. **元认知自检** — 7 项硬约束：敌对测试、数据审计、盲点验证、价值透明化等
 5. **分层交付** — 系统-制度-个体 × 三个时间维度
 6. **伦理敏感性** — 创伤议题内置五项保护约束，反淡化机制防止分析失去锐度
@@ -77,18 +77,24 @@ language: en
 
 ```
 deep-structural-analysis/
-├── SKILL.md                   核心框架（608行）
+├── SKILL.md                   核心框架（~740行）
 ├── config.yaml                模块配置
-├── README.en.md                  English
-├── lite/SKILL.md              v2.0.1 精简版
-├── extensions/                6个按需扩展（250行）
-│   ├── trauma-sensitive.md    v1.0.3 创伤敏感
-│   ├── exit-protocols.md      v1.0.2 降级协议
-│   ├── batch-analysis.md      v1.0.2 批处理
-│   ├── offline-fallback.md    v1.1.1 离线框架
-│   ├── interactive.md         v1.0.1 对话式
-│   └── layered-protocol.md    v1.0.1 认知递进
-└── docs/                      文档
+├── README.md                  简体中文
+├── README.en.md               English
+├── lite/SKILL.md              精简版
+├── extensions/                6个按需扩展
+│   ├── trauma-sensitive.md    创伤敏感
+│   ├── exit-protocols.md      降级协议
+│   ├── batch-analysis.md      批处理
+│   ├── offline-fallback.md    离线框架
+│   ├── interactive.md         对话式
+│   └── layered-protocol.md    认知递进
+├── docs/                      文档
+│   ├── 三向理论.md            三向透镜完整文档
+│   ├── 极限测试全集.md        11道极限测试
+│   ├── SKILL构建全记录.md     v1.0.0→v1.12.1+构建史
+│   └── UPDATELOG.md           更新日志
+└── backups/                   历史备份
 ```
 
 ---

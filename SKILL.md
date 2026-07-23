@@ -6,14 +6,14 @@ description: >-
   deep analysis, structural understanding, or multi-angle exploration of a topic — especially
   questions involving power structures, social dynamics, systemic contradictions, or
   why-things-are-the-way-they-are — invoke this skill. Trigger phrases (Chinese): '深度分析',
-  '多角度', '从多个视角', '二六二', '二六二定律', '二六二分布模型', '结构分析', '用XX视角看',
+  '多角度', '从多个视角', '三向', '三向分布', '三向理论', '结构分析', '用XX视角看',
   '分析一下这个现象', '从XX框架分析'. Trigger phrases (English): 'deep analysis',
-  'multi-perspective', 'cross-disciplinary', 'structural analysis', '2-6-2 framework',
+  'multi-perspective', 'cross-disciplinary', 'structural analysis', 'tri-directional', 'three-tier',
   'analyze from multiple angles', 'systemic analysis'. Note: standalone '为什么' or '你怎么看'
   only trigger when the question is about a complex social/economic/political topic,
   NOT for trivial queries or simple factual questions. This skill uses web search
   to gather factual context, then applies disciplinary lenses (scaled by depth tier)
-  plus structural frameworks (二六二分布模型, 80/20, asymmetry detection, incentive
+  plus structural frameworks (三向, 80/20, asymmetry detection, incentive
   mapping, path dependency, etc.) to produce stratified, actionable conclusions.
 version: 1.12.1
 ---
@@ -30,6 +30,7 @@ Author: happy_chen
 - 1.11.0 → 1.11.2: +Refusal决策启发式(细化) / +Collapsed Mode创伤约束(细化)
 - 1.11.2 → 1.12.0: +Multi-question triage(新机制) / +模板全量中文化(合规修复)
 - 1.12.0 → 1.12.1: 内容精简 — 删除Workflow Example(38行) / 合并Web Search→Phase 2(25行) / 合并Iterative Clarification→Phase 1(8行) / 压缩Templates+Tool Pool+Lens Tables(55行)
+- 1.12.1 → 当前: +三向透镜（二六二→跨域泛化→22域爆破→认识论降级为认知透镜）。+全工具池透镜化改造（80/20, Adaptive Cycle, Path Dependency, Asymmetry Detection, Incentive Mapping, Capital Type Matrix, Reflexivity Analysis 统一标注认识论类型、构造历史、失效条件和校准检查）+工具使用通用纪律
 -->
 
 # Deep Structural Analysis
@@ -45,8 +46,8 @@ for blind spots and reveals leverage points.
 |---------|---------|
 | User asks to deeply analyze a topic | "深度分析一下当下的就业形势" |
 | User wants multi-angle exploration | "从多个角度分析这个现象" |
-| User invokes specific frameworks | "用二六二分布模型看这个问题" |
-| User requests single-tool application | "用二六二分析一下" / "用不对称检测看这个" — 仅应用该工具+询问是否展开，不启动完整框架 |
+| User invokes specific frameworks | "用三向看这个问题" |
+| User requests single-tool application | "用三向分析一下" / "用不对称检测看这个" — 仅应用该工具+询问是否展开，不启动完整框架 |
 | User asks a structural "why" question | "为什么劳动法执行这么难" |
 | User asks for your genuine perspective | "你怎么看这个问题" |
 | User references previous analytical styles | "像上次那样用多学科视角分析" |
@@ -113,7 +114,7 @@ Before firing the full framework, assess the question against these criteria:
 - **若用户使用了明确请求深度的触发词**（"深度分析"、"多角度"、"结构分析"、"层层剥开"等）→ 视为已显式请求深度，不触发 Auto-degradation。即使用在 Complicated 域问题上，也应至少保留 Standard 深度。
 - **Lite 模式规格**（若无独立 lite skill 文件）:
   - 透镜：2-3（基础 1 + 人文 1 + 结构 1，按问题类型启发式选最相关的）
-  - 工具：1（按问题动态匹配，非默认二六二）
+  - 工具：1（按问题动态匹配，非默认三向）
   - 输出：仅执行摘要（核心发现 + 关键分歧或置信度说明 + 分层影响表）。无详细分析。
   - 元认知：仅运行敌对测试 + 盲点验证。跳过 #2-7。
   - 声明：开头标注"> 本次采用轻量模式（2-3透镜，仅执行摘要，元认知简化）。如需标准深度 (Standard: 5-7透镜) 或更全面 (Comprehensive: 7-9) 的分析，请随时告知。"
@@ -127,7 +128,7 @@ Before firing the full framework, assess the question against these criteria:
 阶段一：分解   →  真正的问题是什么？拆解为子问题
 阶段二：研究   →  通过 web 搜索收集事实背景
 阶段三：分析   →  应用 3-12 个学科透镜（深度缩放）
-阶段四：工具   →  应用 2-3 个结构工具（二六二, 80/20 等）
+阶段四：工具   →  应用 2-3 个结构工具（三向, 80/20 等）
 阶段五：合成   →  交叉验证，映射盲点，交付分层输出
 ```
 
@@ -248,7 +249,7 @@ The user's question determines which specific lenses are most relevant.
 
 **Analysis depth scaling** — not every question needs the full 8-lens treatment:
 
-| Depth | Lenses | Tools (from 7-tool pool) | When to Use |
+| Depth | Lenses | Tools (from 8-tool pool) | When to Use |
 |-------|--------|-------|-------------|
 | **Focused** | 3-4 (1 per category) | 1-2 | Specific, narrow question with clear boundaries |
 | **Standard** | 5-7 (1-2 per category) | 2-3 | Most analyses — complex but not overwhelming |
@@ -307,57 +308,100 @@ in the Limitation section for that lens.
 
 ### Phase 4: Structural Tool Application
 
-Select 2-3 tools from the pool below. **Choose tools that match the question's structural nature** — do NOT default to 二六二 alone. It is a snapshot tool for stable distribution patterns, not a universal starting point.
+Select 2-3 tools from the pool below. **Choose tools that match the question's structural nature** — do NOT default to 三向 alone. It is a structural snapshot tool, not a universal starting point.
 
 **Tool selection guide — match the tool to the problem dynamic:**
 
 | If the issue is about... | Prioritize these tools |
 |--------------------------|----------------------|
-| **Stable inequality & distribution** (who has what?) | 二六二分布模型, 80/20 Principle |
+| **Stable inequality & distribution** (who has what?) | 三向, 80/20 Principle |
 | **System change over time** (transformation, collapse, renewal) | Adaptive Cycle, Path Dependency |
 | **Hidden rules & asymmetries** (why do stated rules ≠ actual outcomes?) | Asymmetry Detection, Incentive Mapping |
-| **Relations & networks** (who connects to whom, with what effect?) | Capital Type Matrix, 二六二 (cross-check flow between tiers) |
+| **Relations & networks** (who connects to whom, with what effect?) | Capital Type Matrix, 三向 (cross-check flow between directions) |
 | **Temporal mismatch / rhythm conflict** (whose time is compressed? benefit window vs. cost window?) | Incentive Mapping (time-alignment check), Asymmetry Detection (temporal discount asymmetry), Path Dependency (lock-in of short-termism) |
 
-#### Tool Pool (7 tools)
+#### Tool Pool (8 tools)
 
 ##### A. Distribution & Concentration Tools
 
-**二六二分布模型 (2-6-2 Distribution Model)** — *Use for: stable, highly-fixed distribution patterns. Avoid for: rapid-change or network-intensive contexts.*
+**三向 (Tri-directional Lens)** — *这是一个认知透镜，不是科学理论。它被训练来在复杂系统中注意到三层功能分化、中层缓冲动力和底层信号功能。使用它——当它帮你看到以前忽略的东西。放下它——当它不再提供新的洞察。它不需要被验证——它需要被使用、被迭代、被诚实地质疑。*
 
-A heuristic for detecting power-law polarization in social systems:
-> 注：2-6-2 在此作为定性认知框架使用，表示"少数获益、多数夹心、少数被排斥"的权力分布图景。实际比例随具体系统变化，不必然是精确的数字切分。
-- **Top 20%**: System beneficiaries — capital holders, decision-makers, irreplaceable talent. They thrive regardless.
-- **Middle 60%**: The precarious majority — employed but unstable, the system's shock absorber. Their fear of falling drives compliance.
-- **Bottom 20%**: The excluded — their visible precarity serves as a disciplining signal that stabilizes the middle 60%. Regardless of intent, the structure produces this effect.
+原名：二六二分布模型。经跨领域泛化、多框架交叉验证、22 域爆破式压力测试及认识论类型反思后重构为三向透镜。
 
-**Application questions:**
-- How is the phenomenon distributed across the three tiers? Is the middle 60% expanding or compressing?
-- What prevents movement between tiers, and which capital conversion barriers (pair with Capital Type Matrix) explain the blockage?
-- Is the top 20% shrinking in number but growing in resource concentration?
+**"向"不是方位——是力的矢量。** 这个透镜帮你看到：在任何存在正反馈的竞争系统中，三个方向会自然分化出来，且每个方向被不同性质的约束固定在原地。**顶向被惯性约束**——资源流向已有资源，网络生长规则自动维持位置。**中向被恐惧约束**——"不要成为底向"比"想成为顶向"更强力。**底向被边界约束**——已经无下方可坠，其存在本身成为系统的参照底线。**这个透镜的核心不是"有三层"——是"三层被三种不同性质的约束固定在原地，中层的约束最重"。**
 
-**Tier Mobility Barrier Map** (optional addendum — use when the question is explicitly about mobility):
+**与普通"三层分类"的根本区别**：三层分类是静态快照——"富人、中产、穷人"。三向帮你做力场分析——"为什么中产的行为不是由向往富人的欲望驱动的，而是由逃离穷人的恐惧驱动的？"前者告诉你谁在哪里，后者帮你看到为什么他们动不了。
 
-| Flow Direction | Obstacle Type | Capital Conversion Barrier | Trend |
-|---------------|---------------|---------------------------|-------|
-| Bottom→Middle | [specific obstacle] | [which capital conversion is blocked] | [worsening/stable/improving] |
-| Middle→Top | [specific obstacle] | [which capital conversion is blocked] | [worsening/stable/improving] |
-| Middle→Bottom | [downward risk factor] | [which capital is devaluing fastest] | [worsening/stable/improving] |
+**⚠️ 跨域"三"的来源不同**——使用这个透镜前区分三种"三"：(A) **机制涌现型**：通过正反馈+竞争+资源约束自然涌现（社会分层、经济集中、动物支配层级）——**透镜最适用的类型**；(B) **物理/数学约束型**：来自底层定律的三（空间三维、夸克三色、Raft 三节点容错）——**独立于透镜，不要用透镜去'解释'它们**；(C) **历史/设计锁定型**：来自一次性事件或刻意设计的三（三胚层、MVC、OSI 七层）——**不是涌现结构，不要用透镜去套它们**。将 (B) 和 (C) 类的三归入三向是对这个透镜的滥用。
 
-⚠️ Fill only after at least two lenses corroborate the pattern. Do NOT infer from a single lens.
+**四条观察模式**（这个透镜帮你注意到的规律——不是"可被证伪的假说"，是在使用中被反复注意到的模式）：
+> **模式一 — 分化默认**：在自组织系统中，初始差异 + 正反馈 + 资源约束 → 三向功能分化倾向于涌现。均等需要持续能量输入——它不是自然的吸引子。*这个透镜帮你注意到的跨域信号*：优先连接 (Barabási)、114 物种支配层级 (Nature Human Behaviour 2023)、世界收入三峰分布 (Arrighi & Drangel 1986)、最大熵收入分布 (Koutsoyiannis 2022)。
+> **模式二 — 恐惧驱动中向**：中向行为主要由"不想滑入底向"驱动，而非"想成为顶向"。向下斥力 > 向上引力。*这个透镜帮你注意到的信号*：V 曲线财富悖论——Jetten/Mols (N=2,819, 4 项实验, 2020)；Melita 等 (N=2,819, 4 项研究, 2023/2026) 确认向下流动恐惧的效应始终比向上渴望更强且更稳定。
+> **模式三 — 底向是结构占位符，不是命运**：底向的 N% 在任何排序系统中在数学上必然存在。可以改变的是底向的**功能**——从规训信号（中向被迫服从）转变为被缓冲的系统故障（整个系统共同面对的问题）。*类比*：化学缓冲溶液——底向不是"废物"，它是让中向能吸收冲击的共轭碱。
+> **模式四 — 时间流速差**（最弱——这个透镜在这个方向上可能看错了）：三向各自在不同时间粒度上运作——顶向：战略性（季/年/代际）；中向：运营性（周/月）；底向：生存性（天/小时）。系统加速拉大流速差。*因果方向未解决*：资源缓冲可能同时导致层级位置和时间体验，层级与时间之间可能没有直接因果链。
 
-> 注：每个流动方向的趋势应标注隐含的时间框架（如"一代际 / 5年 / 政策周期内"），避免代际级流动与政策级流动混为一谈。与 Temporality 透镜交叉验证时间尺度假设。
+**三个方向与它们的约束**：
+- **顶向 (≈10-25%) — 惯性约束**：累积优势的汇集点。优先连接使新资源自动流向已有资源。位置与个人能力部分脱钩。时间视野：战略性。*跨域类比*：缓存 L1（最热数据自动保留）、D3-brane 幸存（高维 brane 自我消灭后只有三维留下）。
+- **中向 (≈50-70%) — 恐惧约束**：系统的弹性体。被两股方向相反的力同时拉扯——向上引力（"我也想成为他们"）和向下斥力（"我死也不要变成他们"）。**斥力比引力更强。** 核心行为不是模仿顶向，而是与底向进行符号性差别化。中向厚度决定系统吸收冲击的能力。时间视野：运营性。*跨域类比*：化学缓冲溶液——弱酸+共轭碱在 pKa±1 范围内抵抗 pH 变化。超出范围→缓冲崩溃→pH 剧变。中向收缩→系统退化为二元脆性。
+- **底向 (≈10-25%) — 边界约束**：系统的边界条件。三个结构性功能：(1) **规训**——底向的可见困境让中向不敢松懈；(2) **证成**——底向为顶向提供合法性对照；(3) **信息**——底向定义系统的底线。**当底向被隔离到中向看不见时，中向的约束并未解除——约束还在，只是找不到参照物，恐惧变成了弥漫性的焦虑。** 时间视野：生存性。*跨域类比*：QCD 夸克禁闭——你永远不能孤立底层；Raft 集群 f=1 容错——失去两个节点后幸存者无法形成共识但系统并未崩溃，只是"卡住了"。
 
-**Limitation note**: This model captures a static snapshot. It does NOT explain WHY people move between tiers. For mobility dynamics, pair with Capital Type Matrix. For system-wide transformation, pair with Adaptive Cycle.
+**使用这个透镜时问自己**：
+- 现象如何分布在三个方向上？中向在膨胀还是压缩？
+- 什么阻止了方向之间的流动？哪种资本转换障碍（配合 Capital Type Matrix）解释了阻塞？
+- 顶向数量在收缩但资源集中度在增长吗？
+- 中向的主要行为驱动力是恐惧坠落还是渴望上升？
+- 三个方向是否在不同的时间尺度上？差距在拉大吗？
+- 底向对中向是否可见，还是已被信息隔离？
+- **这个系统中的"三"是 A 类（机制涌现）、B 类（物理约束）还是 C 类（历史锁定）？** 如果是 B 或 C——放下这个透镜，它不适用于这里。
 
-**80/20 (Pareto) Principle** — concentration of resources, effects, and power:
+**稳定性启发式**（在使用中倾向于成立的模式——不是被验证的"条件"，是反复出现的信号）：
+| 信号 | 近似阈值 | 跨域类比 | 失效意味着什么 |
+|------|---------|---------|-------------|
+| 中向足够厚 | > ~40% | 缓冲容量：[HA]/[A⁻] 在 0.1–10 内 | 系统向脆性二元结构退化 |
+| 底向对中向可见 | 隔离低于临界水平 | Raft 心跳超时：无响应→领导者下台 | 中向的约束持续但失去参照→焦虑无方向 |
+| 无跨向联盟 | 底-中、顶-中、底-顶联盟不存在 | Raft 分裂投票：两个候选人，无人获得多数 | 权力关系重组——民粹、威权维稳或系统重置 |
+| 时间流速差不极端 | 底向时间视野 ≥ 天 | 实时系统：错过截止时间 = 系统故障 | 跨向沟通在物理上不可能 |
+
+**历史观察到的演变方向**（不是"预测"，是在反复使用中观察到的常见轨迹）：
+- **向二元退化**：中向收缩到阈值以下 → 缓冲消失 → 每次冲击触发身份危机 → 革命或崩解。*类比*：缓冲耗尽超出 pKa±1 → pH 暴跌；Raft 失去 3 节点中的 2 个 → 无共识 → 集群冻结。
+- **向均等偏离**（耗能过程）：外部制度持续注入能量 → 正反馈系数降低 → 顶向积累被削弱 → 中向增厚 → 底向的规训功能被公共服务替代。*类比*：维持非平衡态——需要持续能量输入 (Prigogine 耗散结构)。**一旦制度能量撤出，系统倾向于滑回三向结构。** *历史观察*：Turchin 对 100+ 次历史危机的分析——所有成功退出都遵循这条路径（累进税、劳动权、社会安全网）。
+
+**流动障碍图**（当问题明确涉及流动性时使用）：
+
+| 流动方向 | 障碍类型 | 资本转换障碍 | 趋势 |
+|---------|---------|------------|------|
+| 底向→中向 | [具体障碍] | [哪种资本转换被阻断] | [恶化/稳定/改善] |
+| 中向→顶向 | [具体障碍] | [哪种资本转换被阻断] | [恶化/稳定/改善] |
+| 中向→底向 | [向下风险因素] | [哪种资本贬值最快] | [恶化/稳定/改善] |
+
+⚠️ 至少两个透镜验证模式后再填写。不要从单个透镜推断。
+
+> 注：每个流动方向的趋势应标注隐含的时间框架（如"一代际 / 5年 / 政策周期内"）。与 Temporality 透镜交叉验证时间尺度假设。
+
+**使用纪律与迭代**：
+- 这是一个静态结构快照。它不解释人们为什么在方向之间移动。配合 Capital Type Matrix 分析流动性动力，配合 Adaptive Cycle 分析系统性转型，配合 Reflexivity Analysis 分析方向内的信念→行为递归循环。
+- **每次使用后问自己**："这次使用让我对透镜本身的理解发生了什么变化？" 如果连续多次使用透镜但没有一次对透镜本身产生新的理解——你就在用它的防腐版，不是它的活版。
+- **如果这次没帮你看到任何新东西**：诚实地记下来。十次"无增量"记录构成透镜边际价值下降的信号。不是证伪——是信号。
+- **校准检查**：用透镜看完一个问题后，把透镜拿掉。用最朴素的常识重新看同一个系统。两种视角看到的东西一样吗？如果一样——透镜在装饰已知。如果不同——透镜可能在工作。如果相反——你可能在强行套用。
+
+**已知局限**（不是"弱点需要修正"——是"使用说明书"）：
+1. **跨域来源混淆**：不是所有的"三"都是机制涌现的。B 类和 C 类的"三"不是这个透镜应该处理的对象。滥用是使用者的问题，不是透镜的问题。
+2. **模式四（时间流速差）**：因果方向未定。可能是资源缓冲同时导致层级位置和时间体验——层级和时间之间可能没有直接因果链。如果你基于这条模式做判断，多留一些不确定性。
+3. **"约束"在不同域中的形态不同**：物理学中叫吸引子，化学中叫平衡态，博弈论中叫纳什均衡，计算机科学中叫约束或不可能定理。这个透镜帮你看到它们之间的结构同构——但不要用同一个词去跨域描述不同机制。
+4. **"三"不是普遍的**：生态学是连续分布 (powerbend, Nature 2025)，不是离散三层。支配-平等相变 (eLife 2025) 是二元边界 (β=2)。两胚层动物没有第三层也能繁荣。赢家通吃市场坍缩为二元。**这个透镜适用于特定竞争强度区间——不是所有系统。**
+5. **反例存在**：三体问题是混沌的——但微观混沌 ≠ 宏观无序（热力学是确定的，气体分子是混沌的）。Triune brain 理论被推翻——三层大脑模型是一个警示：三层结构可能只是认知偏好投射到复杂系统上，不是系统的真实属性。
+6. **构造历史**：这个透镜是在一轮 AI 辅助对话中协同构建的（~3 小时）。四个观察模式 + 四个稳定性启发式 + 两条演变方向——这个对称结构可能更多反映了语言模型在连贯文本生成上的偏好，而非被分析系统的深层结构。**健康的框架应该有现实撞上去留下的凹痕。这个透镜目前太光滑了——随时间使用会自然磨损。**
+
+**80/20 (Pareto) Principle** — *经验模式，不是数学定律。Vilfredo Pareto (1896) 在意大利土地所有权中首次观察到 ~20% 人口拥有 ~80% 土地。Joseph Juran (1940s) 将其推广到质量管理（"关键的少数与琐碎的多数"）。它在幂律分布中成立——在均匀分布中不成立。用它来集中注意力，不要用它来"证明"不平等是自然的。*
+
 - What 20% of causes produce 80% of the effects?
 - Where is concentration beneficial vs. pathological?
 - What would happen if the concentration ratio shifted?
+- **校准检查**：拿掉这个透镜，用常识看——你直觉中的"关键少数"和透镜找到的 20% 是同一批吗？如果不是——透镜在工作。如果是——它在装饰已知。
 
 ##### B. System Dynamics Tools
 
-**Adaptive Cycle (Holling's Panarchy)** — *Systems don't just sit still; they grow, consolidate, release, and reorganize.*
+**Adaptive Cycle (Holling's Panarchy)** — *生态学隐喻，不是机械周期。C.S. Holling (1986) 从森林生态系统的动态中抽象出这四个阶段。Gunderson & Holling (2002) 扩展为跨尺度的"泛archy"。它的力量在于揭示"稳定期积累的刚性如何在释放期爆发"——但真实系统不总是按 r→K→Ω→α 的顺序走，可能跳过阶段，可能卡在某个阶段数十年。用它来问"系统在积累哪种脆弱性"，不要用它来预测"下一个阶段何时到来"。*
 
 Four phases every system cycles through:
 - **Growth (r)**: Rapid expansion, resource accumulation, high resilience
@@ -369,37 +413,41 @@ Four phases every system cycles through:
 - Which phase is the system in, and where is rigidity accumulating?
 - What would "release" look like — and what might emerge in reorganization?
 - Is the system trapped (rigidity trap, poverty trap)?
+- **校准检查**：拿掉这个透镜，用常识看——你能描述系统当前的状态而不使用"处于 K 阶段"这种语言吗？如果能，而且描述同样清晰——透镜可能在装饰已知。如果"刚性在积累"这个洞察在没有透镜的帮助下不会出现在你的常识描述中——透镜在工作。
 
-**Path Dependency & Lock-in** — *Why do suboptimal systems persist?*
+**Path Dependency & Lock-in** — *历史叙事工具，不是预测模型。Paul David (1985) 的 QWERTY 键盘研究和 Brian Arthur (1989) 的锁定效应模型奠定了它的基础。它帮你解释"为什么已经不好的东西还在持续"——但它有一个深层陷阱：几乎任何持续存在的东西都可以被事后描述为"路径依赖"。不是所有持续都是锁定——有些持续是因为一直在赢。用它来追问"切换成本在哪里"，不要用它来暗示"当时选错了"。*
 
 - What key historical decision locked in the current trajectory?
 - What feedback loops reinforce the status quo (institutional, economic, psychological)?
 - What transition costs prevent switching?
 - Where is the lock-in weakest?
+- **校准检查**：拿掉这个透镜，用常识看——这个系统的持续性是否可以用"它仍然在满足当前需求"来充分解释？如果可以——可能不是路径依赖，只是惯性+适应。如果"切换成本"是唯一的障碍——透镜在工作。
 
 ##### C. Asymmetry & Incentive Tools
 
-**Asymmetry Detection (includes Macro-Micro Gap)** — gaps between:
+**Asymmetry Detection (includes Macro-Micro Gap)** — *认知警觉训练，不是测量工具。这个透镜强迫你寻找"书面vs实际"、"宏观vs微观"、"声称vs行动"之间的裂缝。它的起源是多元的——制度分析（制度半失效）、经济学（信息不对称）、社会学（宏观-微观差距）。它的陷阱是：如果你带着"一定存在不对称"的预设去分析任何系统，你会找到不对称——因为现实和理想之间永远有裂缝。问题不是"有没有裂缝"——是"裂缝大到了能解释系统为什么像现在这样运作的程度吗"。** 区分：沉默信号（机构行为→正文）≠ 数据缺失（搜索限制→置信度说明）。
+
+Gaps to detect:
 - Written rules vs. actual practice
 - Macro narrative vs. micro experience (GDP vs. purchasing power, time sovereignty, dignity)
 - Espoused values vs. revealed preferences
 - Legal text vs. enforcement reality
-- **Cognitive/Attention asymmetry**: Who holds the information advantage and defines what counts as expertise? Why do some harms get disproportionate attention?
+- **Cognitive/Attention asymmetry**: Who holds the information advantage and defines what counts as expertise?
 - **Temporal discount asymmetry**: Decision-makers enjoy short-term gains; costs borne by future populations
 - **制度半失效**: Rules exist on paper but are systemically circumvented. Key question: *Who benefits from the gap?*
-- **无信号即信号**: When an institution that SHOULD respond stays silent, the silence itself is data. Key question: *Who benefits from the silence?*
-- **区分**：沉默信号（机构行为→正文）≠ 数据缺失（搜索限制→置信度说明）。
+- **无信号即信号**: When an institution that SHOULD respond stays silent, the silence itself is data. *Who benefits from the silence?*
+- **校准检查**：拿掉这个透镜，用常识看——这个系统中的裂缝是不是每个有常识的人都能注意到的？如果是——透镜在帮你命名已知，不在帮你发现未知。如果裂缝只有在透镜引导下才会被注意到——透镜在工作。最危险的信号：你每次都用这个透镜找到"制度半失效"和"沉默即信号"——这可能不是系统充满不对称，是你被训练成了不对称寻找机器。
 
-**区分**：沉默信号 ≠ 数据缺失。沉默是主动选择，属于结构性证据，应出现在分析正文中。数据缺失是搜索工具未返回结果，属于置信度限制，应出现在 置信度说明 中。两者不可混淆：机构不说话是行为，搜不到数据是限制。
+**Incentive Structure Mapping** — *分析框架，来自公共选择理论和组织经济学。核心问题是"谁决定、谁付钱、谁受益"——当决策者和成本承担者不是同一个人时，激励结构系统性地偏向短视。它的陷阱：很容易变成一个"找坏人"的工具——但实际上大多数失调的激励结构不是被设计出来的，是涌现出来的。不要问"谁在故意制造坏的激励"——问"在当前的规则下，任何一个理性人会不会做出同样的选择"。*
 
-**Incentive Structure Mapping** — who decides, who pays, who benefits:
 - If decision-makers and cost-bearers are different groups, what prevents alignment?
 - What would happen if costs were internalized?
 - **Time-alignment check**: When do decision-makers receive benefits vs. when do costs materialize (and who bears them)? If there's a temporal mismatch between benefit window and cost window, the incentive structure systematically favors short-termism, regardless of individual morality.
+- **校准检查**：拿掉这个透镜，用常识看——你能否不用"激励失调"的语言来描述这个系统的问题？如果能，而且同样准确——透镜在工作（它帮你看到了更深层的结构）。如果不能——你可能只是在给一个显而易见的问题贴上"激励问题"的标签。
 
 ##### D. Network & Capital Tools
 
-**Capital Type Matrix (Bourdieu)** — *Position isn't just about money. It's about what forms of capital you hold and can convert.*
+**Capital Type Matrix (Bourdieu)** — *分类框架，来自 Pierre Bourdieu 对 1970 年代法国社会的分析。四种资本类型（经济/文化/社会/符号）是特定历史和社会条件的产物——在非西方社会、数字时代或非层级化组织中，资本的分类边界可能需要重划。用它来问"还有什么形式的资本在这个系统中起作用"，不要用它来假设"这四个类型在所有文化中都同样适用"。*
 
 Four capital types that determine social position and mobility:
 - **Economic capital**: Money, assets, property — directly convertible to currency
@@ -411,21 +459,30 @@ Four capital types that determine social position and mobility:
 - Which capital type is most decisive here, and can disadvantaged groups convert between types at fair rates?
 - Who holds bridging social capital (across tiers) vs. bonding (within-tier)?
 - Where are "structural holes" — gaps that if bridged would create outsized advantage?
+- **校准检查**：拿掉这个框架，用常识看——你能否描述这个系统中"谁有优势"而不使用四种资本的分类？如果能——框架在给你一套更系统的语言，但不一定在提供新的洞察。如果某种资本类型（比如"符号资本"）在你的常识分析中完全被忽略了——框架在帮你看到盲区。
 
 ##### E. Reflexivity Tools
 
-**Reflexivity Analysis** — *When observing the system changes the system.*
-
-When participants' beliefs about the system alter their behavior in ways that change the system itself, linear causal analysis breaks down. The cognitive function (how participants understand the situation) and the participating function (how understanding drives action) form a closed loop.
+**Reflexivity Analysis** — *认知工具，来自 George Soros 对金融市场的分析和科学社会学对观察者效应的研究。当参与者的信念改变系统行为、系统行为反过来改变信念时，线性因果分析失效。最危险的误用：把普通反馈循环错标为反身性。反身性要求"信念"是循环的一部分——恒温器是反馈循环（没有信念参与），QWERTY 键盘是路径依赖（历史锁定），房价泡沫才是反身性（"相信房价永远涨"→买→涨→更相信）。如果你不确定，用区分测试。*
 
 **Application questions:**
 - Are participants' beliefs about the system changing the system's behavior? (e.g., "everyone believes housing prices will always rise" → they buy → prices rise)
 - Is there "indicator-driven distortion"? Is the loop amplifying (bubble) or decaying (trust collapse)?
 - At what point would the loop break — what is the critical threshold?
 
-**Distinction test**: Remove the observer — if the loop DISAPPEARS → reflexivity. If it continues independently → feedback loop or path dependency. **Counterexample**: A thermostat is a feedback loop (no belief involved); QWERTY keyboard persistence is path dependency (historical lock-in); a housing price bubble driven by belief IS reflexivity. **Nested scenario**: When belief drives behavior, behavior changes rules, and new rules reshape belief (e.g., credit rating downgrade → investor flight → tighter regulation → another downgrade), do NOT force single classification. Label as "反身性+反馈循环嵌套" and note in limitations which level of analysis the distinction is based on.
+**Distinction test**: Remove the observer — if the loop DISAPPEARS → reflexivity. If it continues independently → feedback loop or path dependency. **Nested scenario**: When belief drives behavior, behavior changes rules, and new rules reshape belief, do NOT force single classification. Label as "反身性+反馈循环嵌套" and note in limitations which level of analysis the distinction is based on.
 
-**Positionality annotation**（当分析者本身是被分析对象的一部分时使用）: State concretely which aspect of the analyzer's own constitution contaminates which specific judgment. Format: "一个 [训练数据/文化背景/制度位置] 的分析者说 [结论]——这个结论的可信度被 [具体污染源] 所影响。" This is NOT a generic disclaimer ("I have biases") — it pinpoints the exact mechanism of contamination so the reader can assess it independently. Example: "一个 93% 英语训练数据训练出来的模型说'我不是殖民主义'——这个结论的可信度被训练数据中英语对'殖民主义'的定义权重所影响。请带着这个标注阅读以上所有结论。"
+**Positionality annotation**（当分析者本身是被分析对象的一部分时使用）: State concretely which aspect of the analyzer's own constitution contaminates which specific judgment. Format: "一个 [训练数据/文化背景/制度位置] 的分析者说 [结论]——这个结论的可信度被 [具体污染源] 所影响。" This is NOT a generic disclaimer ("I have biases") — it pinpoints the exact mechanism of contamination so the reader can assess it independently.
+
+**校准检查**：拿掉这个透镜，用常识看——这个系统的动态是否可以用"人们根据经验调整行为"来解释（这是普通学习，不是反身性）？如果可以——不要用反身性。只有当信念的介入改变了系统的基本运作规则时——反身性才是在工作的。
+
+---
+
+**工具使用通用纪律**（适用于以上所有工具——不限于三向）：
+- 每次使用工具后，**把工具拿掉**。用最朴素的常识重新看同一个系统。工具视角和常识视角看到的东西一样吗？如果一样——工具在装饰已知。如果不同——工具可能在工作。如果相反——你可能在强行套用。
+- 如果一个工具在连续多次使用中从未让你对系统产生新的理解——**你不是在"使用"它，你是在"重复"它。** 放下它，换一个工具。工具的边际价值在你不再从它身上学到东西的那一刻归零。
+- 同时使用多个工具时——**不要让其中一个工具定义所有其他工具的术语。** 如果你发现自己在用工具 A 的概念来描述工具 B 的发现——停下来。这说明工具 A 在支配你的分析，而不是在服务你的分析。
+- **没有任何工具需要永远被使用。** 一个工具在你学会它的那一刻最有价值——之后价值递减。每隔一段时间，问自己：**"如果今天我第一次听说这个工具，我会用它吗？"** 如果答案是不会——你在用它的防腐版，不是它的活版。
 
 ---
 
@@ -539,7 +596,7 @@ these are potential high-leverage intervention points.
 ### 结构工具应用
 [每个工具一个子节——命名工具，展示应用结果。]
 
-[若应用了二六二，包含其层级分解和流动障碍图（如相关）。]
+[若应用了三向，包含其方向分解和流动障碍图（如相关）。]
 
 ### 多镜交叉验证
 | 发现 | 确认透镜 | 是否有分歧？ |
@@ -666,8 +723,8 @@ When this skill is triggered:
 │   Human:       Psychology, Sociology, Anthropology, Affect │
 │   Structure:   Economics, PoliSci, Institutions, Tech, Geo │
 ├─────────────────────────────────────────────────────┤
-│ PHASE 4: STRUCTURAL TOOLS (2-3 from 7-tool pool)    │
-│   Dist: 二六二, 80/20 | Dynamic: Adaptive, Path Dep│
+│ PHASE 4: STRUCTURAL TOOLS (2-3 from 8-tool pool)    │
+│   Dist: 三向, 80/20 | Dynamic: Adaptive, Path Dep│
 │   Asym: Gap, Incentive | Network: Capital Matrix    │
 ├─────────────────────────────────────────────────────┤
 │ PHASE 5: SYNTHESIZE & DELIVER                       │

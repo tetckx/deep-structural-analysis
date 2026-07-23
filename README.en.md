@@ -3,7 +3,7 @@
 # Deep Structural Analysis
 
 > Multi-Perspective Structural Analysis for Complex Questions
-> **v1.12.1+** - Progressive Architecture - 608-core + 250-extensions
+> **v1.12.1+** - Progressive Architecture - ~740-core + 6 on-demand extensions · 11 extreme tests · Full tool-pool lensification
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.12.1-green.svg)](SKILL.md)
@@ -46,9 +46,11 @@ All extensions load on-demand based on trigger conditions - no manual configurat
 
 ```
 deep-structural-analysis/
-├── SKILL.md                    Core framework (608 lines)
+├── SKILL.md                    Core framework (~740 lines)
 ├── config.yaml                 Module config
-├── lite/SKILL.md              Auto-degrade target
+├── README.md                   简体中文
+├── README.en.md               English
+├── lite/SKILL.md              Lite version
 ├── extensions/                 On-demand modules (6 files)
 │   ├── trauma-sensitive.md     Trauma-aware + over-abstraction
 │   ├── exit-protocols.md       Degradation + refusal handling
@@ -56,7 +58,12 @@ deep-structural-analysis/
 │   ├── offline-fallback.md     Prior knowledge (10 frameworks)
 │   ├── interactive.md          Conversational mode
 │   └── layered-protocol.md     L1->L2->L3 progression
-└── docs/                       Build history + changelog + test cases
+├── docs/                       Theory doc + test cases + changelog
+│   ├── 三向理论.md            Tri-directional Lens full doc
+│   ├── 极限测试全集.md        11 limit test cases
+│   ├── SKILL构建全记录.md     Build history v1.0.0→v1.12.1+
+│   └── UPDATELOG.md           Update log
+└── backups/                   Historical backups
 ```
 
 **Progressive Depth**: Core always. Extensions on trigger. Clear/Complicated -> Lite. Complex/Chaotic -> core + extensions.
@@ -99,7 +106,7 @@ language: en
 
 ## Tested Limits
 
-10 extreme test cases (see `docs/极限测试全集.md`): self-reference, protocol conflict, incommensurability, information vacuum, metacognitive self-reference, real-time feedback loops, self-negation, value conflict, epistemological collapse.
+11 extreme test cases (see `docs/极限测试全集.md`): self-reference, protocol conflict, incommensurability, information vacuum, metacognitive self-reference, real-time feedback loops, self-negation, value conflict, epistemological collapse, full tool-pool self-referential analysis.
 
 ---
 
@@ -135,4 +142,4 @@ MIT - use, modify, distribute freely. Attribution appreciated.
 
 ---
 
-*Built through 15 versions, 10 extreme test cases, and 20+ real-world validations. The framework is complete; the model is the analyst.*
+*Built through 15 versions, 11 extreme test cases, and 20+ real-world validations. The framework is complete; the model is the analyst.*

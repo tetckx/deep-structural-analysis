@@ -22,7 +22,7 @@ Items sharing structural dynamics MUST be grouped. Do NOT analyze items individu
 *Load note*: In batch mode, per-lens analysis for core clusters may need to be more condensed than standalone Comprehensive. Prioritize multi-lens cross-validation completeness — the metric is not "how many words per lens" but "is the core finding independently confirmed by ≥3 lenses." If the analysis load approaches 20+ total lenses across core clusters, compress per-lens depth rather than sacrificing cross-validation breadth.
 
 ### Step 3: Unified synthesis
-- 二六二分布图 of the full set
+- 三向分布图 of the full set
 - Cross-cluster pattern identification
 - One set of Stratified Implications for the full batch
 - One Metacognitive Checkpoint

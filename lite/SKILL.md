@@ -55,7 +55,7 @@ Pick the ONE that best matches the problem dynamic:
 
 | Dynamic | Tool |
 |---------|------|
-| Distribution/power concentration | 二六二分布模型 |
+| Distribution/power concentration | 三向 |
 | Change over time | Adaptive Cycle or Path Dependency |
 | Rules ≠ reality | Asymmetry Detection |
 | Who benefits vs. who pays | Incentive Mapping |
@@ -88,7 +88,7 @@ No Part B. Output ONLY this:
 [1句 — 常识答案的哪个经验前提被推翻了？]
 
 ### 结构快照
-[1个工具输出 — 二六二层级 / 激励映射 / 不对称发现]
+[1个工具输出 — 三向层级 / 激励映射 / 不对称发现]
 
 ### 个体启发
 [1句可行动认知 — 非空泛建议。若结构限制下无可行动策略，提供认知锚点而非编造建议]
