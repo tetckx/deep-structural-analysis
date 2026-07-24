@@ -1,7 +1,7 @@
 # Deep Structural Analysis — 技能构建全记录
 
-> 从零到v1.12.1的完整旅程  
-> 13个透镜 · 8个核心工具 · 17个补充模板 · 7项元认知检查  
+> 从零到v1.14.3的完整旅程  
+> 13个透镜 · 9个核心工具 · 17个补充模板 · 7项元认知检查  
 > 历经 12+ 次 Oracle 审查 · 8个机制测试案例 + 5个自测 + 10个知乎实战验证
 
 ---
@@ -250,7 +250,7 @@ Skill文档达847行，过长的指令文本影响执行保真度。通过删除
 | **备份** | SKILL.v1.12.0.backup.md（847行） |
 | **轻量版** | 120行 |
 | **透镜总数** | 13（Foundation:4 + Human:4 + Structure:5） |
-| **核心工具** | 8（二六二/80/20/Adaptive Cycle/Path Dependency/Asymmetry/Incentive/Capital Matrix/Reflexivity） |
+| **核心工具** | 9（三向/80/20/Adaptive Cycle/Path Dependency/Asymmetry/Incentive/Capital Matrix/Reflexivity/**多层信号解码**） |
 | **补充模板** | 17（速查表压缩后，去Core Question列+反向映射） |
 | **元认知检查** | 7项（新增：过度抽象化风险检查#7） |
 | **退出协议** | 3级（Collapsed→Ultra-Collapsed）+ 拒绝处理分支 |
@@ -307,6 +307,11 @@ Skill文档达847行，过长的指令文本影响执行保真度。通过删除
 | v1.12.0 | 847 | 知乎10题实战→Multi-question triage(新机制)+模板全量中文化(合规修复) |
 | v1.12.1 | 721 | 内容精简：删除Workflow Example+合并Web Search/Iterative+压缩Templates/Tool Pool/Lens Tables(-126行, -15%) |
 | v1.12.1+ | 608+250 | 渐进式架构完成：核心+六扩展。六份扩展逐份审查微调完毕。当前最新。 |
+| **v1.13.0** | **~795** | **MLSD 透镜化：认识论标注+校准增强+边际价值归零+使用时序+嵌套场景+集成状态+构造历史 —— 7 gaps closed，工具池 8→9** |
+| v1.14.0 | ~830 | MLSD v0.3 历史校准：四个边界测试+可靠性退化曲线+缺失检测协议+局限5→8 |
+| v1.14.1 | ~850 | MLSD v0.4 Skill联合使用协议：前置传感器定位+产出密度→分析深度依赖关系 |
+| v1.14.2 | ~870 | MLSD v0.5 联合实战案例库：三次Skill+MLSD实战写入附录+构造历史完整记录 |
+| **v1.14.3** | **~900** | **MLSD v0.6 管道架构校准：三问=解码门控≠管道门控。Skill独立启动。三种联合模式** |
 | lite v2.0.0 | 148 | 结构性重写：渐进式深度入口定位+声明对齐+全中文化+创伤感知+完整降级 |
 
 ---

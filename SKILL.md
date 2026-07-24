@@ -15,7 +15,7 @@ description: >-
   to gather factual context, then applies disciplinary lenses (scaled by depth tier)
   plus structural frameworks (三向, 80/20, asymmetry detection, incentive
   mapping, path dependency, etc.) to produce stratified, actionable conclusions.
-version: 1.12.1
+version: 1.14.3
 ---
 
 <!--
@@ -31,6 +31,11 @@ Author: happy_chen
 - 1.11.2 → 1.12.0: +Multi-question triage(新机制) / +模板全量中文化(合规修复)
 - 1.12.0 → 1.12.1: 内容精简 — 删除Workflow Example(38行) / 合并Web Search→Phase 2(25行) / 合并Iterative Clarification→Phase 1(8行) / 压缩Templates+Tool Pool+Lens Tables(55行)
 - 1.12.1 → 当前: +三向透镜（二六二→跨域泛化→22域爆破→认识论降级为认知透镜）。+全工具池透镜化改造（80/20, Adaptive Cycle, Path Dependency, Asymmetry Detection, Incentive Mapping, Capital Type Matrix, Reflexivity Analysis 统一标注认识论类型、构造历史、失效条件和校准检查）+工具使用通用纪律
+- 当前 → 1.13.0: +多层信号解码（MLSD）工具 v0.2 —— 高博弈密度信息逆向解码（信号生存分析/多接收者映射/时序关联域）。+F类 Communication & Signal Tools。+认识论标注+校准增强+边际价值归零+使用时序+嵌套场景+集成状态 —— 7 gaps closed，工具池 8→9
+- 1.13.0 → 1.14.0: MLSD v0.3 历史校准升级。四个边界测试案例（Powell/BP/Apple/Google）→ +加权混合分类+发送者自反身性（轴一增强）+后排检测协议+间接接收者检测（轴二下限修订）+筛查压力衰减（三问第二关增强）+可靠性退化曲线+缺失检测协议+已知局限 5→8（新增症状vs信号、信息空白的策略功能）
+- 1.14.0 → 1.14.1: MLSD v0.4 Skill联合使用协议。+MLSD作为Skill前置传感器的定位+产出密度→分析深度的依赖关系+博弈密度不对称声明。两者分析对象不同：MLSD分析信息，Skill分析结构。
+- 1.14.1 → 1.14.2: MLSD v0.5 联合实战案例库。三次Skill+MLSD联合实战写入附录——三方治理文件/黄仁勋×孙正义/Xi WAIC演讲。构造历史从单次扩展为完整三次记录。方法学教训逐案标注。
+- 1.14.2 → 1.14.3: MLSD v0.6 管道架构校准。修正 MLSD-Skill 关系：三问=解码门控≠管道门控。Skill独立启动。MLSD是可选输入源。+三种联合模式。
 -->
 
 # Deep Structural Analysis
@@ -319,8 +324,9 @@ Select 2-3 tools from the pool below. **Choose tools that match the question's s
 | **Hidden rules & asymmetries** (why do stated rules ≠ actual outcomes?) | Asymmetry Detection, Incentive Mapping |
 | **Relations & networks** (who connects to whom, with what effect?) | Capital Type Matrix, 三向 (cross-check flow between directions) |
 | **Temporal mismatch / rhythm conflict** (whose time is compressed? benefit window vs. cost window?) | Incentive Mapping (time-alignment check), Asymmetry Detection (temporal discount asymmetry), Path Dependency (lock-in of short-termism) |
+| **Encoded communication & multi-audience messaging** (why was this statement released now, and what is it signaling to whom?) | Multi-Layer Signal Decoding |
 
-#### Tool Pool (8 tools)
+#### Tool Pool (9 tools)
 
 ##### A. Distribution & Concentration Tools
 
@@ -475,6 +481,50 @@ Four capital types that determine social position and mobility:
 **Positionality annotation**（当分析者本身是被分析对象的一部分时使用）: State concretely which aspect of the analyzer's own constitution contaminates which specific judgment. Format: "一个 [训练数据/文化背景/制度位置] 的分析者说 [结论]——这个结论的可信度被 [具体污染源] 所影响。" This is NOT a generic disclaimer ("I have biases") — it pinpoints the exact mechanism of contamination so the reader can assess it independently.
 
 **校准检查**：拿掉这个透镜，用常识看——这个系统的动态是否可以用"人们根据经验调整行为"来解释（这是普通学习，不是反身性）？如果可以——不要用反身性。只有当信念的介入改变了系统的基本运作规则时——反身性才是在工作的。
+
+##### F. Communication & Signal Tools
+
+**多层信号解码 (Multi-Layer Signal Decoding)** — *这是一个认知解码工具，不是信号探测仪。它帮你注意到信息中的博弈结构，但它发现的"信号"可能更多反映了你自身的解码预设，而非发送者的真实意图。它不是分析"信息说了什么"——而是在分析"为什么这段信息中的每一个幸存词都是经过博弈后留下的"。*
+
+在 AI 时代的组织沟通中，任何面向公众的文本——尤其是经过内部 AI 分析筛选后释放的文本——不存在"无意中留下的话"。每一句幸存下来的话，至少满足一个条件：必须说的真话、故意放的信号、用来稀释注意力的填充、或是为了增加可信度而故意留下的破绽。
+
+**⚠️ 使用前必须通过三问测试**——任何一关不过，放下工具：
+- **信源是否有可损失的信用？** （上市公司CEO ✅，匿名用户 ❌）
+- **信息经过至少一层筛选吗？** （内部信经PR审查 ✅，实时直播 ❌）
+- **发布者和接收者之间存在利益博弈吗？** （融资博弈 ✅，教程作者 ❌）
+
+**三个分析轴**：
+
+**轴一：信号生存分析** — 对所有存留信息强制分类为：必须说的真话（不说会被戳穿）、故意放的信号（对特定接收者编码）、掩护填充（保护核心信息的注意力稀释）、可信度锚点（故意留的破绽用来证明"这是真的"）。⚠️ **嵌套危险信号**：如果可信度锚点被暴露得太精确、太有策略性——发送者可能已经预判了你正在使用不对称检测并提前反制。区分：真实的破绽通常只服务于一个叙事目标；策略性"可控弱点"会同时服务多个目标（可信度提升 + 信息锚定 + 误导方向）。
+
+**轴二：多接收者映射** — 对每一段有信息量的内容，强制识别至少三个接收者（投资人、竞争对手、监管者、团队内部、媒体/公众），并解码对每一个接收者的不同含义。好的编码 = 一段话对五个不同的接收者传递五种不同的信息。
+
+**轴三：时序关联域** — 将信号与其发布时刻的同时事件强制关联。向左看7天（什么触发了这个信号），向右看3个月（这个信号在为什么铺路）。主要信号通常至少满足：危机管理、预期管理、战场定位、叙事铺垫中的一个。
+
+**使用时序——推荐分析序列**：
+1. **MLSD（阶段一：解码所有公开信号）** → 2. **Asymmetry Detection（阶段二：将信号与内部行为对比，寻找裂缝）** → 3. **Reflexivity Analysis（阶段三：追踪信念→行为→信念的反身性循环）**
+
+⚠️ **嵌套场景——当发送者预判了你的工具**：当发送者知道受众会进行不对称检测，ta 可能预先编入"可控弱点"以增加可信度。如果可信度锚点被暴露得太精确——发送者可能已内化了你的分析工具并提前反制。
+
+**校准检查**：退出工具，用最简单的语言重新描述这段文本。朴素描述和工具分析的对比——如果朴素描述已经蕴含了相同的结论，工具在装饰已知。如果工具发现了朴素描述无法揭示的结构性约束，工具可能在工作。**额外检查——拿掉这个工具，用最朴素的常识重新读一遍这段文本。你看到的"隐藏信号"是否可能只是一个普通人在压力下自然地选择措辞？如果朴素解读和工具解读得出相同结论——工具在装饰已知。如果工具解读让你看到朴素解读看不到的结构——工具在工作。如果工具解读让你看到了和朴素解读相反的东西——你大概率在过度拟合。**
+
+**跨信源对照**：当分析同一时间窗口的多个信源时，寻找信号共振（多个信源释放相似信号→正在形成共识或解体的旧共识）、信号对抗（相反方向的信号→争夺叙事定义权）、信号沉默（所有相关方在发声时一方选择沉默→沉默本身就是信号）。
+
+**边际价值归零检查**（MLSD 专用版）：如果连续三次使用这个工具，你每次发现的都是"被编码的困境"、"被迫的选择"、"不可说的真实意图"——你可能不是在解码发送者，你是在重复自己的解码习惯。
+
+**已知局限**：
+1. 假设发送者是理性的——非理性发送者会导致工具找出不存在的信号（最大失效模式）
+2. 过度拟合风险极高——校准检查只能部分防御，不能完全消除
+3. 对来源质量极度敏感——低质量信源产生的是投射，不是洞察
+4. 无法分析信息空白——被完全删除的段落和选择的沉默不在工具的覆盖范围内。使用缺失检测协议（完整文档中）获取部分防御
+5. 无法区分"策略性表现"和"压力性症状"——当发送者在长期危机压力下发言时，ta 的话可能已是认知资源的耗尽（来源：BP 2010 案例）
+6. 历史校准已完成——基于七个已知结局案例（含四个边界测试：Powell/BP/Apple/Google）的系统校准。可靠性退化曲线见完整文档
+7. 接收者超过五个时注意力配给效应——间接接收者可能被系统性遗漏，且其对长期演化的影响可能反超前排（来源：Apple 2016 案例）
+8. 文本中存在显眼"信息空白"时——核心策略信号可能位于文本之外，工具产出必须附带标注（来源：Google 2010 案例）
+
+**可靠性退化曲线**：正常→高 | 发送者不确定性→中 | 理性框架收窄→中转低 | 危机压力→低或退出 | 非理性→不适用。完整文档见 `docs/多层信号解码.md`。
+
+**集成状态**：独立可用，已集成进 Skill 的 Phase 4 工具池 F 类。完整文档见 `docs/多层信号解码.md`，精简版在此。
 
 ---
 
