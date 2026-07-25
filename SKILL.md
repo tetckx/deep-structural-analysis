@@ -15,7 +15,7 @@ description: >-
   to gather factual context, then applies disciplinary lenses (scaled by depth tier)
   plus structural frameworks (三向, 80/20, asymmetry detection, incentive
   mapping, path dependency, etc.) to produce stratified, actionable conclusions.
-version: 1.15.0
+version: 1.15.1
 ---
 
 <!--
@@ -37,6 +37,7 @@ Author: happy_chen
 - 1.14.1 → 1.14.2: MLSD v0.5 联合实战案例库。三次Skill+MLSD联合实战写入附录——三方治理文件/黄仁勋×孙正义/Xi WAIC演讲。构造历史从单次扩展为完整三次记录。方法学教训逐案标注。
 - 1.14.2 → 1.14.3: MLSD v0.6 管道架构校准。修正 MLSD-Skill 关系：三问=解码门控≠管道门控。Skill独立启动。MLSD是可选输入源。+三种联合模式。
 - 1.14.3 → 1.15.0: +第四类物质透镜（Material Lenses）——生态/环境、基础设施/物质流、生命科学/身体。领域触发式必选（类比历史透镜规则）。+反物质决定论警告。+物质-结构张力表。透镜池 13→16。<!-- 次版本：新增独立机制（透镜类别） -->
+- 1.15.0 → 1.15.1: MLSD v0.7 对话引导分析模块。+三个追问（引导性问题/追问压力/独白对比）+三种时间尺度（微观/中观/宏观）+立场漂移检测。修正 MLSD 的"独白假设"和"时间冻结假设"。新增已知局限 9（对话引导偏差）和 10（时间冻结偏差）。
 -->
 
 # Deep Structural Analysis
