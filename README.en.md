@@ -6,7 +6,7 @@
 > **v1.15.1** - Progressive Architecture - ~580-core + 6 on-demand extensions · 16 lenses (4 categories) · 9 core tools
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.12.1-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-1.15.1-green.svg)](SKILL.md)
 
 > **Note**: This skill was developed and stress-tested exclusively with Chinese training corpora. English output may not match the quality of Chinese output. For best results, use Chinese as the output language (`language: zh` in config.yaml).
 
