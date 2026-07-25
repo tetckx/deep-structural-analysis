@@ -15,7 +15,7 @@ description: >-
   to gather factual context, then applies disciplinary lenses (scaled by depth tier)
   plus structural frameworks (三向, 80/20, asymmetry detection, incentive
   mapping, path dependency, etc.) to produce stratified, actionable conclusions.
-version: 1.14.3
+version: 1.15.0
 ---
 
 <!--
@@ -36,6 +36,7 @@ Author: happy_chen
 - 1.14.0 → 1.14.1: MLSD v0.4 Skill联合使用协议。+MLSD作为Skill前置传感器的定位+产出密度→分析深度的依赖关系+博弈密度不对称声明。两者分析对象不同：MLSD分析信息，Skill分析结构。
 - 1.14.1 → 1.14.2: MLSD v0.5 联合实战案例库。三次Skill+MLSD联合实战写入附录——三方治理文件/黄仁勋×孙正义/Xi WAIC演讲。构造历史从单次扩展为完整三次记录。方法学教训逐案标注。
 - 1.14.2 → 1.14.3: MLSD v0.6 管道架构校准。修正 MLSD-Skill 关系：三问=解码门控≠管道门控。Skill独立启动。MLSD是可选输入源。+三种联合模式。
+- 1.14.3 → 1.15.0: +第四类物质透镜（Material Lenses）——生态/环境、基础设施/物质流、生命科学/身体。领域触发式必选（类比历史透镜规则）。+反物质决定论警告。+物质-结构张力表。透镜池 13→16。<!-- 次版本：新增独立机制（透镜类别） -->
 -->
 
 # Deep Structural Analysis
@@ -225,6 +226,8 @@ from each Foundation/Human/Structure category.
 | **Governance / Compliance** (rules don't work) | Institutional Analysis, Political Science, Economics（透镜）+ Asymmetry Detection, Incentive Mapping（工具） |
 | **Temporal / Rhythm Conflict** (systems out of sync) | Temporality, Institutional Analysis, Systems Theory |
 | **Spatial / Territorial** (who controls space) | Geography, Political Science, Economics |
+| **Physical / Ecological constraint** (what are the biophysical limits?) | Ecological/Environmental Lens, Infrastructure/Material Flow, Systems Theory |
+| **Bodily / Biological limit** (how do organic constraints shape decisions?) | Life Science/Bodily Lens, Psychology, Institutional Analysis |
 | **Emotional / Affective** (mobilized emotions) | Affect, Anthropology, Psychology |
 
 For hybrid questions (most are), pick the dominant dynamic and weight lenses accordingly.
@@ -233,7 +236,7 @@ Distribution/Allocation. Weight Technology Studies + Systems Theory + History he
 then add Economics + Sociology for distributional effects.
 
 Select lenses according to the depth tier above (Focused: 3-4, Standard: 5-7, Comprehensive: 7-9).
-**Always include at least one from each of the three categories** (Foundation, Human, Structure).
+**Always include at least one from each applicable category** (Foundation, Human, Structure; Material when domain-triggered).
 The user's question determines which specific lenses are most relevant.
 
 ⚠️ **Anti-inertia warning**: When a question is primarily about economics/policy (e.g., GDP data, labor law), there is a strong gravitational pull to select only Economics + Political Science + Institutional Analysis — the "comfort zone" cluster. This produces flat, predictable analysis. **For every analysis, deliberately include at least one lens from the Human category (Psychology, Sociology, or Anthropology) and one lens from Foundation outside your comfort zone.** The best insights often come from the lens that initially seems least relevant. If the question is about economic data, ask: what does this mean for *how people feel and behave* (Psychology)? What *cultural meaning* does this carry (Anthropology)?
@@ -254,11 +257,13 @@ The user's question determines which specific lenses are most relevant.
 
 **Analysis depth scaling** — not every question needs the full 8-lens treatment:
 
-| Depth | Lenses | Tools (from 8-tool pool) | When to Use |
+| Depth | Lenses | Tools (from 9-tool pool) | When to Use |
 |-------|--------|-------|-------------|
-| **Focused** | 3-4 (1 per category) | 1-2 | Specific, narrow question with clear boundaries |
-| **Standard** | 5-7 (1-2 per category) | 2-3 | Most analyses — complex but not overwhelming |
-| **Comprehensive** | 7-9 (2-3 per category) | 3-4 | Broad systemic questions with high ambiguity |
+| **Focused** | 3-4 (1 per applicable category) | 1-2 | Specific, narrow question with clear boundaries |
+| **Standard** | 5-7 (1-2 per applicable category) | 2-3 | Most analyses — complex but not overwhelming |
+| **Comprehensive** | 7-9 (2-3 per applicable category) | 3-4 | Broad systemic questions with high ambiguity |
+
+**Material depth note**: Material lenses are counted within the lens budget ONLY when triggered by domain. When no material trigger fires, the budget is allocated across the three standard categories. Material lenses are not an additional overhead imposed on every analysis — they are a precision tool activated by relevance.
 
 **Depth selection heuristic**: If the question can be answered with a single disciplinary
 insight, use Focused. If it requires understanding interactions between 2+ systems, use
@@ -269,9 +274,9 @@ replaces most jobs"), use Comprehensive.
 At the start of the analysis output, state: *"本次采用标准深度 (Standard, 5-7 透镜)。如需更精简 (Focused, 3-4) 或更全面 (Comprehensive, 7-9) 的分析，请告知。"*
 This gives the user control and sets expectations.
 
-**Comprehensive cap**: Maximum 9 lenses per analysis. If the user requests all lenses, select the 9 most relevant and declare in the 置信度说明 which lenses were omitted and why.
+**Comprehensive cap**: Maximum 10 lenses per analysis (material lenses counted only when domain-triggered). If the user requests all lenses, select the 10 most relevant and declare in the 置信度说明 which lenses were omitted and why.
 
-#### Lens Categories (select 1+ from each)
+#### Lens Categories (select 1+ from each applicable category)
 
 | Category | Lens | Core Question | Use When |
 |----------|------|--------------|----------|
@@ -288,6 +293,9 @@ This gives the user control and sets expectations.
 | | Institutional Analysis | Formal rules vs. actual practices — why does the gap exist? | Policy implementation, organizational behavior |
 | | Technology Studies | How does tech interact with human systems? | AI, automation, digital transformation |
 | | Geography | How is space produced, distributed, and contested? | Urbanization, regional inequality, infrastructure |
+| **Material** (0-1, domain-triggered mandatory) | Ecological/Environmental | What ecosystem services does this system depend on? What physical thresholds are being approached or breached? | Climate, energy, agriculture, resource extraction |
+| | Infrastructure/Material Flow | What physical infrastructure and material flows does this system rely on? What are their failure modes? | Supply chains, compute/energy infrastructure, manufacturing |
+| | Life Science/Bodily | What biological constraints shape the decision-makers and populations in this system? | Crisis decision-making, public health, aging, cognitive neuroscience |
 
 #### Lens Application Protocol
 
@@ -310,6 +318,31 @@ may draw on pre-training knowledge for frameworks and theory, but their APPLICAT
 to the specific question must be grounded in researched facts. If a lens cannot
 be fact-bound (because the relevant data doesn't exist), note this explicitly
 in the Limitation section for that lens.
+
+#### Material Lenses: Domain-Triggered Mandatory Protocol
+
+Material lenses are NOT universally mandatory. They follow a domain-triggered rule analogous to the History lens rule. **When the question's domain matches a trigger, the corresponding Material lens becomes mandatory for that analysis.** When no trigger matches, Material lenses are optional.
+
+| Trigger Condition | Mandatory Lens |
+|------------------|----------------|
+| Question involves climate, energy, environment, agriculture, natural resources | **Ecological/Environmental** |
+| Question involves infrastructure, supply chains, compute hardware, manufacturing, logistics | **Infrastructure/Material Flow** |
+| Question involves crisis decision-making, public health, bioethics, cognitive performance under stress | **Life Science/Bodily** |
+
+**⚠️ 反物质决定论警告**：当分析因触发条件而包含物质透镜时，必须同时至少包含一个**人类透镜**（心理学、社会学或人类学）。物质约束不直接决定人类行为——它们通过人类感知、制度中介和社会动员来施加影响。说"碳预算限制了一切"本身的准确性不亚于说"碳预算限制了一切——但是否被接受取决于政治叙事和公众认知"。物质透镜告诉你"物理世界允许什么"——人类透镜告诉你"人们愿意接受什么"。
+
+**Material lens application protocol**（与其他透镜一致）：
+1. **Core insight**: What physical or biological constraint does this lens reveal?
+2. **Key framework**: What model/data from this discipline applies? (e.g., planetary boundaries, EROI, material flow analysis, allostatic load)
+3. **Limitation**: This lens reveals constraints but not how humans will respond to them — do NOT use it to make deterministic predictions about human behavior.
+4. **Tension with other lenses**: Common tensions include Economics (efficiency vs. sustainability), Systems Theory (feedback loops vs. hard physical ceilings), Psychology (cognitive mechanisms vs. neurophysiological substrates).
+
+**Common Material × Structure tensions**（延伸现有张力表）：
+| Lens Pair | Typical Tension |
+|-----------|----------------|
+| Economics vs. Ecological/Environmental | Discount-rate optimization vs. intergenerational ecosystem debt |
+| Political Science vs. Infrastructure/Material Flow | Sovereignty claims vs. transboundary material dependencies |
+| Institutional Analysis vs. Life Science/Bodily | Rule design vs. biological limits of decision-makers under prolonged stress |
 
 ### Phase 4: Structural Tool Application
 
