@@ -100,8 +100,6 @@ deep-structural-analysis/
 
 ---
 
-## 回滚
+## 版本链
 
-```powershell
-Copy-Item backups\SKILL.v1.12.1.latest.backup.md SKILL.md
-```
+v1.0.0 → v1.15.1：从跨学科分析框架到认知训练系统到完整分析哲学。16透镜4类别。9核心工具。完整构建史见 `docs/SKILL构建全记录.md`。
