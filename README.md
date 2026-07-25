@@ -3,7 +3,7 @@
 # Deep Structural Analysis — 使用须知
 
 > 跨学科深度结构分析技能。将研讨会方法论编码为可复用指令集。
-> 当前核心 v1.15.1 · 渐进式架构 · 默认全家桶加载 · 核心 ~1020 行 + 6 扩展 · 16透镜4类别 · 9核心工具 · 全工具池透镜化
+> 当前核心 v1.15.1 · 渐进式架构 · 默认全家桶加载 · 核心 ~580 行 + 6 扩展 · 16透镜4类别 · 9核心工具
 
 ---
 
@@ -78,7 +78,7 @@ language: en
 
 ```
 deep-structural-analysis/
-├── SKILL.md                   核心框架（~1020行）
+├── SKILL.md                   核心框架（~580行）
 ├── config.yaml                模块配置
 ├── README.md                  简体中文
 ├── README.en.md               English

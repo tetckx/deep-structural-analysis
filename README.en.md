@@ -3,7 +3,7 @@
 # Deep Structural Analysis
 
 > Multi-Perspective Structural Analysis for Complex Questions
-> **v1.15.1** - Progressive Architecture - ~1020-core + 6 on-demand extensions · 16 lenses (4 categories) · 9 core tools · Full tool-pool lensification
+> **v1.15.1** - Progressive Architecture - ~580-core + 6 on-demand extensions · 16 lenses (4 categories) · 9 core tools
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.12.1-green.svg)](SKILL.md)
