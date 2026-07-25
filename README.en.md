@@ -3,7 +3,7 @@
 # Deep Structural Analysis
 
 > Multi-Perspective Structural Analysis for Complex Questions
-> **v1.12.1+** - Progressive Architecture - ~740-core + 6 on-demand extensions · 11 extreme tests · Full tool-pool lensification
+> **v1.15.1** - Progressive Architecture - ~1020-core + 6 on-demand extensions · 16 lenses (4 categories) · 9 core tools · Full tool-pool lensification
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.12.1-green.svg)](SKILL.md)
@@ -34,8 +34,8 @@ All extensions load on-demand based on trigger conditions - no manual configurat
 |-------|--------|
 | 1 | Decompose the question (surface, structural, micro, temporal) |
 | 2 | Web search for factual grounding (mandatory) |
-| 3 | Apply 3-12 disciplinary lenses across Foundation / Human / Structure |
-| 4 | Apply 2-3 structural tools (Asymmetry Detection, Reflexivity, etc.) |
+| 3 | Apply 3-12 disciplinary lenses across Foundation / Human / Structure / Material |
+| 4 | Apply 2-3 structural tools (Asymmetry Detection, Reflexivity, MLSD, etc.) |
 | 5 | Synthesize with cross-validation, divergence mapping, blind spot audit |
 
 **Output**: Executive Summary -> Detailed Analysis (on demand) -> Collapsed (degradable)
