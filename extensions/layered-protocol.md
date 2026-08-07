@@ -1,7 +1,6 @@
 ---
 name: deep-structural-analysis/layered
 description: Layered Analysis Protocol — L1 surface impression → L2 single-lens challenge → L3 full multi-lens structural analysis. Load when user says "第一感觉是..." / "直觉上..." / "乍一看..." or when surface narrative is highly misleading.
-version: 1.0.1
 ---
 
 # Layered Analysis Protocol（认知递进模式）

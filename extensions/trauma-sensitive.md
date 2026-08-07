@@ -1,7 +1,6 @@
 ---
 name: deep-structural-analysis/trauma
 description: Trauma-sensitive quality standard, over-abstraction check, and anti-dilution constraint. Load when the topic involves systemic violence, discrimination, or concrete harm to living people. Skip for abstract/systemic topics without direct embodied harm (GDP data, institutional design, technology adoption).
-version: 1.0.3
 ---
 
 # Trauma-Sensitive Analysis Extension

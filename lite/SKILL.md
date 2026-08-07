@@ -6,7 +6,6 @@ description: >-
   when user asks for "简单分析"/"快速分析"/"大概看一下". Runs 2-3 lenses + 1 tool,
   outputs compact Executive Summary only, ~1/3 token budget. For Complex/Chaotic domains
   or user explicitly requests deep analysis, use the full deep-structural-analysis skill.
-version: 2.0.1
 ---
 
 # Structural Analysis — Lite
@@ -31,6 +30,12 @@ If search unavailable: use pre-training knowledge + mark all conclusions low-con
 
 **Phase 3 — Analyze**: 2-3 lenses + 1 tool → compact output.
 
+**Phase 3.5 — AI Acceleration Quick Check**（AI加速性快问，默认执行，1句话）:
+- 若问题涉及未来推演/技术趋势/竞争格局：先自问"此分析涉及的任何环节，哪些可能被AI加速？哪些是AI加速不了的硬约束（物理验证/政治监管/组织变革/人类决策）？"
+- 若答案涉及技术演进/能力预测 → 升级为完整版 `extensions/ai-epistemology.md`
+- 若分析对象是AI/科技/竞争格局 → 直接加载完整版
+- 未执行即输出，视为流程违规
+
 ---
 
 ## Lens Selection (2-3 lenses)
@@ -39,13 +44,13 @@ Pick from problem-driven clusters. Always include at least ONE lens outside your
 
 | Problem feels like... | Lenses |
 |----------------------|--------|
-| Economic/Resource | Economics, Institutional Analysis, History |
-| Social/Cultural | Sociology, Anthropology, Psychology |
-| Tech/Transformation | Technology Studies, Systems Theory, Temporality |
-| Power/Governance | Political Science, Institutional Analysis, Geography |
-| Emotional/Identity | Affect, Anthropology, Psychology |
+| Economic/Resource | 经济学, 制度分析, 历史 |
+| Social/Cultural | 社会学, 人类学, 心理学 |
+| Tech/Transformation | 技术研究, 系统论, 时间性 |
+| Power/Governance | 政治学, 制度分析, 地理 |
+| Emotional/Identity | 情感, 人类学, 心理学 |
 
-**Anti-inertia rule**: If instinct says "this is an economic problem", pick Psychology or Anthropology as one of your 2-3.
+**Anti-inertia rule**: If instinct says "this is an economic problem", pick 心理学 or 人类学 as one of your 2-3.
 
 ---
 
@@ -148,4 +153,4 @@ This is the progressive-depth entry point. When in doubt between lite and full: 
 
 ---
 
-*Companion to deep-structural-analysis v1.12.1+. For full framework documentation: see `../README.md`.*
+*Companion to deep-structural-analysis v1.8.0+. For full framework documentation: see `../README.md`.*

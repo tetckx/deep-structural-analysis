@@ -1,7 +1,6 @@
 ---
 name: deep-structural-analysis/offline
 description: Structured prior knowledge framework for offline analysis. Load automatically when Phase 2 detects no accessible search tool.
-version: 1.1.1
 ---
 
 # Offline Fallback — Structured Prior Knowledge

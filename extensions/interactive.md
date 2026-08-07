@@ -1,7 +1,6 @@
 ---
 name: deep-structural-analysis/interactive
 description: Interactive analysis protocol — alternative to full one-shot delivery. Load when user says "先聊聊" / "探讨一下" / "一步步来" / "explore this with me" or topic is genuinely exploratory.
-version: 1.0.1
 ---
 
 # Interactive Analysis Protocol（对话式分析 · 可选）

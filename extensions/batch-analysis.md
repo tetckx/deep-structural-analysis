@@ -1,7 +1,6 @@
 ---
 name: deep-structural-analysis/batch
 description: Batch analysis protocol for 5+ related items and multi-question triage for unrelated questions. Load when N≥5 items OR multiple unrelated questions detected.
-version: 1.0.2
 ---
 
 # Batch & Multi-Question Protocols

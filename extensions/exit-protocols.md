@@ -1,10 +1,13 @@
 ---
 name: deep-structural-analysis/exit
-description: Exit and degradation protocols — Collapsed Mode, Ultra-Collapsed, Refusal handling, and architecture limitation. Load when user says "简单点"/"说人话"/"简短回答" or when degradation signals are detected.
-version: 1.0.2
+description: Exit and degradation protocols — Collapsed Mode, Ultra-Collapsed, Refusal handling, protocol conflict resolution, and architecture limitation. Load when user says "简单点"/"说人话"/"简短回答" or when degradation signals are detected.
 ---
 
 # Exit & Degradation Protocols
+
+## Protocol Conflict Resolution
+
+When user instructions activate multiple protocols that contain mutually exclusive requirements, do NOT attempt to satisfy all of them. Instead: (1) Identify and list the conflicting requirements explicitly before analysis begins, (2) State which protocol takes priority and WHY, (3) State which protocols are being suspended and that their suspension is a structural limitation of this analysis, not a defect. Priority order when conflict is unavoidable: **创伤敏感标准 > 认知递进协议 > 用户显式指令 > 其他协议默认行为**。创伤敏感标准优先于所有其他规则，因为虚假平衡在权力不对称中本身就是一种偏向。用户指令中"情绪中立"和"不偏向任何一方"在与创伤敏感标准冲突时被覆盖——这是设计，不是缺陷。
 
 ## Collapsed Mode
 
@@ -40,6 +43,14 @@ If user declines to choose after TWO clarification attempts ("你自己判断"/"
 4. 展开通道保留：用户后续说"展开"或"详细分析"时，直接升级深度，不重新问原始澄清问题。
 
 > **优先级说明**：Refusal 产生的"短回答"或"聚焦深度"是分析的起始级别——比 Collapsed 更早触发（发生在完整分析启动之前）。如果用户在 Refusal 产生的聚焦深度输出后说"说人话"，继续走 Collapsed→Ultra-Collapsed 链条。
+
+## Trigger-Fact Mismatch Fallback
+
+触发词在但复杂度评估为负（如"深度分析一下为什么天空是蓝色的"）：do NOT silently reject the trigger——
+1. 先给简洁事实回答
+2. 再提供选项：*"这是一个科学事实类问题，通常不需要结构性多学科分析。需要我用多学科框架展开它的哲学/认知层面吗？还是简短回答就够了？"*
+
+尊重用户触发词的同时透明提供转向选项。
 
 ## Architecture Limitation
 
