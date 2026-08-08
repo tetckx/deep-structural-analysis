@@ -1,100 +1,11 @@
-# Deep Structural Analysis — Module Config / 模块加载配置
-# Default: all enabled. Disable unused modules to save context.
-# 默认：全家桶。按需关闭不需要的模块以节省上下文。
-# Changes take effect immediately. 修改后立即生效。
-# 本文件不设 version 字段——版本归属见 docs/UPDATELOG.md 版本矩阵。
+# Deep Structural Analysis — 配置
+# 本文件为文档性配置：执行以 SKILL.md 为准。default 与 enabled 开关为维护参考，
+# 运行时行为由用户请求与 SKILL.md 触发条件决定（行为实验验证：配置项从未被执行路径读取）。
 
-# ============================================================
-# Depth Control / 深度控制
-# ============================================================
 depth:
-  # Focused(3-4) | Standard(5-7) | Comprehensive(7-9)
-  # 默认分析深度
+  # 默认分析深度（用户未指定时）
   default: Standard
 
-  # Auto-degrade to Lite for Clear/Complicated domains
-  # 自动降级：Clear/Complicated 域是否自动切换到 lite 模式
-  auto_degrade_to_lite: true
-
-# ============================================================
-# Output Language / 输出语言
-# zh = Chinese (default) | en = English
-# 默认中文。改为 en 即切换为全英文输出。
-# 执行机制：模型触发时读取本字段；zh = 全中文输出（透镜名/工具名/章节/表格/正文全部中文），
-# en = 全英文输出（全部英文化，无例外）。若模型无法读取本文件，按用户提问语言判断。
-# ============================================================
-language: zh
-
-# ============================================================
-# Extensions / 扩展模块（裁剪开关，非按需加载）
-# 实际执行：标准单轮分析仅使用 SKILL.md 核心内容；
-# 扩展与 docs/ 完整文档在显式场景读取（单工具模式 / 交互模式 / 用户追问展开）。
-# enabled: true = 可用，false = 跳过（即使触发条件满足）
-# ============================================================
-extensions:
-
-  # Batch + multi-question triage — N>=5 items or multiple unrelated questions
-  # 批处理+多问题分流
-  batch_analysis:
-    enabled: true
-
-  # Exit + degradation — "简单点" / "说人话" or refused clarification
-  # 退出+降级协议
-  exit_protocols:
-    enabled: true
-
-  # L1→L2→L3 cognitive progression — "第一感觉是..."
-  # 认知递进协议
-  layered_protocol:
-    enabled: true
-
-  # Trauma-sensitive + over-abstraction — violence/discrimination topics
-  # 创伤敏感+过度抽象化
-  trauma_sensitive:
-    enabled: true
-
-  # Interactive analysis — "先聊聊" / "探讨一下"
-  # 对话式分析
-  interactive:
-    enabled: true
-
-  # Offline fallback — search unavailable (recommend keeping enabled)
-  # 离线回退（建议保持启用）
-  offline_fallback:
-    enabled: true
-
-  # AI Epistemology — correct analyst's own framework against AI-accelerated change
-  # AI认知论：修正分析者自身被AI加速所破坏的认知预设（技术时间线/研发周期/能力预测时触发）
-  ai_epistemology:
-    enabled: true
-
-  # Lens application details — Focused exemption / Material protocol / AI anthropomorphism calibration / 传播层判定表 / 心理学三层拓展 / 引导式联想判定表
-  # 透镜应用细节：Focused豁免 / 物质透镜协议 / AI拟人化校准 / 传播层判定 / 心理学拓展 / 引导联想判定（Phase 3 条件引用+按需加载）
-  lens_application:
-    enabled: true
-
-# ============================================================
-# Presets / 预设方案
-# Uncomment to activate / 取消注释以激活
-# ============================================================
-# Light: core + exit only / 轻量方案
-# extensions:
-#   batch_analysis:   { enabled: false }
-#   exit_protocols:    { enabled: true  }
-#   layered_protocol:  { enabled: false }
-#   trauma_sensitive:  { enabled: false }
-#   interactive:       { enabled: false }
-#   offline_fallback:  { enabled: true  }
-#   ai_epistemology:   { enabled: false }
-#   lens_application:  { enabled: false }
-
-# Quick: core only / 速查方案
-# extensions:
-#   batch_analysis:   { enabled: false }
-#   exit_protocols:    { enabled: false }
-#   layered_protocol:  { enabled: false }
-#   trauma_sensitive:  { enabled: false }
-#   interactive:       { enabled: false }
-#   offline_fallback:  { enabled: false }
-#   ai_epistemology:   { enabled: false }
-#   lens_application:  { enabled: false }
+language:
+  # 输出语言：zh = 全中文，en = 全英文；模型按 config 读取，无法读取时按用户提问语言判断
+  default: zh
