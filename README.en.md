@@ -61,7 +61,7 @@ All extensions are pre-wired in config.yaml as trim switches - standard single-t
 
 ```
 deep-structural-analysis/
-├── SKILL.md                    Core framework (~580 lines)
+├── SKILL.md                    Core framework (~590 lines)
 ├── config.yaml                 Module config
 ├── README.md                   简体中文
 ├── README.en.md               English

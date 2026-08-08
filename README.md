@@ -119,7 +119,7 @@ extensions:
 
 ```
 deep-structural-analysis/
-├── SKILL.md                   核心框架（~580行）
+├── SKILL.md                   核心框架（~590行）
 ├── config.yaml                模块配置
 ├── README.md                  简体中文
 ├── README.en.md               English
