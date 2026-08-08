@@ -41,20 +41,14 @@ Foundation：认识论/系统论/历史/时间性 · Human：心理学/社会学
 ## 目录
 
 ```
-├── SKILL.md                   核心框架（执行，215 行）
+├── SKILL.md                   核心框架（执行，219 行）
 ├── config.yaml                文档性配置（default: Standard, language: zh）
-├── docs/
-│   ├── depth-reference.md     三向+MLSD 完整理论（深度参考，非执行）
-│   ├── behavioral-experiment.md  精简决策链（维护记录）
-│   ├── attack-survivors.md    元认知参考（攻击幸存者记录）
-│   ├── cases.md               维护案例库
-│   ├── UPDATELOG.md           版本历史（唯一权威）
-│   └── 极限测试全集.md        历史测试档案
-└── extensions/                触发式扩展
-    ├── exit-protocols.md      三级降级+拒绝处理
-    ├── batch-analysis.md      批处理协议
-    ├── trauma-sensitive.md    创伤敏感约束
-    └── offline-fallback.md    离线框架锚点+理论推断标注
+└── docs/
+    ├── depth-reference.md     三向+MLSD 完整理论（深度参考，非执行）
+    ├── behavioral-experiment.md  精简决策链（维护记录）
+    ├── attack-survivors.md    元认知参考（攻击幸存者记录）
+    ├── case-test-archive.md   案例与测试档案（维护参考）
+    └── UPDATELOG.md           版本历史（唯一权威）
 ```
 
 ## 配置

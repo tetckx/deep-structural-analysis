@@ -49,13 +49,12 @@
 
 | 组件 | 文件 | 说明 |
 |------|------|------|
-| 主框架（执行） | `SKILL.md`（216 行） | 唯一权威主版本——所有重要机制直接写入（触发守卫/攻击循环/推演四查/透镜/工具/质量标准/创伤敏感/降级/批量/Gotchas） |
+| 主框架（执行） | `SKILL.md`（219 行） | 唯一权威主版本——所有重要机制直接写入（触发守卫/攻击循环/推演四查/透镜/工具/质量标准/创伤敏感/降级/批量/Gotchas） |
 | 深度参考 | `docs/depth-reference.md` | 三向+MLSD 完整理论（合并自原两文档，深度场景参考，非执行必需） |
 | 元认知参考 | `docs/attack-survivors.md` | 攻击幸存者记录（防止机制被误读为正确性保证） |
 | 精简决策链 | `docs/behavioral-experiment.md` | 行为实验精简的完整决策链（维护审计用） |
-| 维护案例库 | `docs/cases.md` | 维护者文档（单轮分析不读取） |
+| 案例与测试档案 | `docs/case-test-archive.md` | 维护者文档（近期实战案例 + 极限压力测试历史，合并自 cases.md 与极限测试全集.md；单轮分析不读取） |
 | 更新日志 | `docs/UPDATELOG.md` | 版本历史唯一权威 |
-| 历史档案 | `docs/极限测试全集.md` | 历史测试记录（开发档案，非执行） |
 | 配置 | `config.yaml` | 文档性配置（default: Standard, language: zh——执行以 SKILL.md 为准） |
 | 入口 | `README.md` / `README.en.md` | 使用须知（用户入口） |
 

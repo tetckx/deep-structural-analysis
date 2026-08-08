@@ -32,7 +32,7 @@ Five-phase analysis (Decompose → Research → Multi-lens Analysis → Structur
 - `docs/depth-reference.md` — full theory for 三向 & MLSD (reference)
 - `docs/behavioral-experiment.md` — maintenance decision chain
 - `docs/attack-survivors.md` — metacognitive reference
-- `extensions/` — trigger-based extensions (batch, exit, trauma-sensitive, offline)
+- `docs/case-test-archive.md` — case & test archive (maintenance)
 
 ## Version
 
