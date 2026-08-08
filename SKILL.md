@@ -124,7 +124,7 @@ Author: happy_chen
 | Physical / Ecological constraint | 生态/环境, 基础设施, 系统论 |
 | Emotional / Affective | 情感, 人类学, 心理学 |
 
-深度档位：**Focused**（3-4 透镜, 1-2 工具）/ **Standard**（5-7, 2-3）/ **Comprehensive**（7-9, 3-4）。默认 Standard。
+深度档位（透镜/工具配额，用户选择见"深度选择"节）：**Focused**（3-4 透镜, 1-2 工具）/ **Standard**（5-7, 2-3）/ **Comprehensive**（7-9, 3-4）。默认 Standard。
 
 ⚠️ **Anti-inertia warning**: 经济/政策类问题有强引力只选舒适区组合 → 扁平分析。**每次分析必须含 ≥1 个舒适区外人文透镜 + ≥1 个舒适区外基础透镜**——最不相关的透镜常产出最佳洞察。
 
@@ -314,11 +314,26 @@ Author: happy_chen
 - **单一叙事锚定**：官方口径/媒体共识默认可信——分析前必须暴露靶子（攻击循环第 1 步），交付前必须执行对立攻击。
 - **局部证据否定断言**：用"我能找到的证据范围"推断"全部证据范围"——grep 文档无命中 ≠ 案例不存在（2026-08-08 实战实例：攻击外部报告时，用 skill 文档搜索无果断言其"案例来源幻觉"，实际案例存在于被覆盖的对话历史中）。证据缺失只能降权+监测，不能断言否定——推演四查第 1 条（"不得因无证据而排除"）不仅适用于核心归因，同样适用于对他人论断的否定。
 
+## 深度选择（用户可修改）
+
+分析深度由用户控制，任何时刻可改：
+
+| 档位 | 透镜/工具 | 用户如何触发 |
+|------|-----------|-------------|
+| **Focused** | 3-4 透镜 / 1-2 工具 | 用户说"大概/简要/简单聊一下/快速/别太深入" |
+| **Standard**（默认） | 5-7 透镜 / 2-3 工具 | 用户未指定深度时 |
+| **Comprehensive** | 7-9 透镜 / 3-4 工具 | 用户说"非常深入/全面剖析/层层剥开/往死里挖" |
+
+- **输出开头必须声明当前深度**："本次采用标准深度 (Standard)。如需 Focused/Comprehensive 请告知。"——声明不是装饰，是给用户修改的入口提示
+- **分析中途可改**："再深入一点" → 升一档；"简单点/说人话" → 降级（走 Exit/Degradation Protocol）
+- 不确定时：问用户一个问题确认深度，不擅自决定
+- 复杂度域自动降级（Complicated 无显式深度请求 → Focused）与深度声明不冲突——降级时声明"已降级为 Focused（复杂度域 Complicated）"
+
 ## Skill Invocation Protocol
 
 1. **Run trigger guard**: Apply the Complexity Quick Assessment
 2. **暴露靶子**（攻击循环第 1 步）：简述默认立场 + 关键结论清单
-3. **Announce depth**: State the selected depth tier (default: Standard). Mild auto-detection: "非常深入/全面剖析" → Comprehensive; "大概/简要" → Focused; uncertain → Standard and ask.
+3. **Announce depth**: 按"深度选择"表声明当前档位（默认 Standard）+ 一行摘要
 4. **Execute Phases 1-5**: 思考链完整执行，输出只含产物（见边界协议）
 5. **Output Part A first** — end with the opt-in prompt for detailed expansion
 6. **强制攻击 + 承认局限**（攻击循环第 2/4 步，交付前）——修订痕迹以位置性标注形式进入产物
