@@ -4,7 +4,7 @@
 
 ![Version](https://img.shields.io/badge/version-1.9.0-green.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-> 跨学科深度结构分析技能。当前版本 **v1.9.0** · 渐进式架构 · 16透镜4类别 · 10核心工具 · 攻击循环协议 + 推演四查 + 行为实验精简（590→219 行）。
+> 跨学科深度结构分析技能。当前版本 **v1.9.0** · 渐进式架构 · 16透镜4类别 · 10核心工具 · 攻击循环协议 + 推演四查 + 行为实验精简。
 
 ## 它是什么
 
