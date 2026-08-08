@@ -1,6 +1,10 @@
 ﻿# Deep Structural Analysis — 使用须知
 
-> 跨学科深度结构分析技能。当前版本 **v1.9.0** · 渐进式架构 · 16透镜4类别 · 10核心工具 · 攻击循环协议 + 推演四查 + 行为实验精简（590→215 行）。
+**Read this in other languages:** [:us: English](README.en.md)
+
+![Version](https://img.shields.io/badge/version-1.9.0-green.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
+> 跨学科深度结构分析技能。当前版本 **v1.9.0** · 渐进式架构 · 16透镜4类别 · 10核心工具 · 攻击循环协议 + 推演四查 + 行为实验精简（590→219 行）。
 
 ## 它是什么
 
@@ -58,3 +62,7 @@ Foundation：认识论/系统论/历史/时间性 · Human：心理学/社会学
 ## 版本
 
 v1.9.0——完整版本链见 `docs/UPDATELOG.md`（版本历史唯一权威）。
+
+## 许可证
+
+[MIT](LICENSE)

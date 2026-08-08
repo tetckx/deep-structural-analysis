@@ -1,6 +1,8 @@
 ﻿# Deep Structural Analysis
 
-[![Version](https://img.shields.io/badge/version-1.9.0-green.svg)](SKILL.md)
+**Read this in other languages:** [:cn: 简体中文](README.md)
+
+[![Version](https://img.shields.io/badge/version-1.9.0-green.svg)](SKILL.md) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 > Multi-perspective structural analysis skill for complex social, economic, philosophical, and systemic questions. **Chinese primary** — developed and stress-tested with Chinese corpora; Chinese output quality exceeds English.
 
