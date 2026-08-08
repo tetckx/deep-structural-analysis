@@ -55,8 +55,7 @@
 | 精简决策链 | `docs/behavioral-experiment.md` | 行为实验精简的完整决策链（维护审计用） |
 | 案例与测试档案 | `docs/case-test-archive.md` | 维护者文档（近期实战案例 + 极限压力测试历史，合并自 cases.md 与极限测试全集.md；单轮分析不读取） |
 | 更新日志 | `docs/UPDATELOG.md` | 版本历史唯一权威 |
-| 配置 | `config.yaml` | 文档性配置（default: Standard, language: zh——执行以 SKILL.md 为准） |
-| 入口 | `README.md` / `README.en.md` | 使用须知（用户入口） |
+| 入口 | `README.md` / `README.en.md` | 使用须知（用户入口；输出语言规则已内联 SKILL.md，无外部 config） |
 
 **已移除组件**：lite/（降级模式弃用，Complicated 域直接按 Focused）、extensions/（8 扩展机制全部并入主文件）、docs/tools/（增量≈0）、三向理论.md + 多层信号解码.md（合并为 depth-reference.md）、docs/synthesis-reference.md、quick-reference-card.md、layered-protocol.md、interactive.md、ai-epistemology.md、lens-application.md。
 

@@ -29,16 +29,20 @@ The result is stratified, fact-bound, confidence-calibrated analysis — with bl
 A real analysis of "Why did DeepSeek announce a price hike while demand was exploding?" produces this shape:
 
 ```
-深度声明：Standard · 复杂度域 Complex
+Depth: Standard · Complexity domain: Complex
 
-【暴露靶子】默认立场："涨价 = 纯供需调节"（待攻击）
-【核心发现】涨价预告未执行 + 公告后需求创新高（8.9T/日峰值）
-  → 不是降压工具，而是"叙事动作 + 资源重配信号"
-【多镜共识】博弈（预告=期权）/ 制度（口径=信号）/ 物理（97%缓存=算力紧）
-【置信度】中——"预告不执行"是事实（高），"动机归因"是解释（中）
-【修订痕迹】反证"8/4服务降级=危机反应"被评估：无法排除 → 动机归因降级
-【分层影响】系统（价格体系重锚）/ 制度（开发者成本结构）/ 个体（囤积行为）
-【盲点】内部训练数据不可见；竞争对手反应未覆盖
+[PRIOR EXPOSED] Default stance: "Price hike = pure supply-demand adjustment" (to be attacked)
+[CORE FINDING] Announcement without execution + demand hit new high after it (8.9T/day peak)
+  → Not a demand-reduction tool, but a "narrative move + resource-reallocation signal"
+[CROSS-LENS CONSENSUS] Game theory (announcement = option) / Institutional (wording = signal)
+  / Physical (97% cache hit = compute tightness)
+[CONFIDENCE] Medium — "announcement not executed" is fact (high), "motive attribution"
+  is interpretation (medium)
+[REVISION TRACE] Counter-evidence "8/4 service degradation = crisis response" assessed:
+  cannot be ruled out → motive attribution downgraded
+[LAYERED IMPACT] System (pricing re-anchoring) / Institutional (developer cost structure)
+  / Individual (hoarding behavior)
+[BLIND SPOTS] Internal training data invisible; competitor responses not covered
 ```
 
 Every analysis carries this shape: **priors exposed → facts gathered → multi-lens cross-validation → confidence calibrated → revisions from adversarial attack recorded** — so you can see *what was challenged* and *what survived*, not just the polished conclusion.
@@ -72,7 +76,7 @@ Trigger by asking for depth: "深度分析…", "从多个角度…", "用三向
 
 ## Configuration
 
-`config.yaml` — documentation-level only: `default: Standard` depth, `language: zh`.
+No external config file — **output language follows the user's question language** (Chinese question → full Chinese output; English question → full English output; full switching, see "Output Language Rules" in SKILL.md). Depth defaults to Standard; user can specify.
 
 ## Files
 

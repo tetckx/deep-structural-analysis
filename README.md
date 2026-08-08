@@ -65,7 +65,6 @@ Foundation：认识论/系统论/历史/时间性 · Human：心理学/社会学
 
 ```
 ├── SKILL.md                   核心框架（执行，219 行）
-├── config.yaml                文档性配置（default: Standard, language: zh）
 └── docs/
     ├── depth-reference.md     三向+MLSD 完整理论（深度参考，非执行）
     ├── behavioral-experiment.md  精简决策链（维护记录）
@@ -76,7 +75,7 @@ Foundation：认识论/系统论/历史/时间性 · Human：心理学/社会学
 
 ## 配置
 
-`config.yaml` 为文档性配置——执行以 SKILL.md 为准（行为实验验证：配置项从未被执行路径读取）。
+无外部配置文件——**语言由用户提问语言决定**（中文提问→全中文输出，英文提问→全英文输出；全量切换，见 SKILL.md"输出语言规则"）。深度默认 Standard，用户可指定。
 
 ## 版本
 
