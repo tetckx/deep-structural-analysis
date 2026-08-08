@@ -6,23 +6,69 @@
 
 > Multi-perspective structural analysis skill for complex social, economic, philosophical, and systemic questions. **Chinese primary** — developed and stress-tested with Chinese corpora; Chinese output quality exceeds English.
 
+---
+
+## What It Does
+
+Most AI analysis gives you a confident single-perspective answer. This skill does the opposite: it forces the analysis through **16 disciplinary lenses**, **10 structural tools**, and an **attack loop** that exposes the analyst's own priors and subjects every conclusion to adversarial review before delivery.
+
+The result is stratified, fact-bound, confidence-calibrated analysis — with blind spots explicitly listed and uncertain claims explicitly marked, instead of hidden.
+
+**Use it when** the question is complex, multi-sided, or systemic:
+- "Why does labor-law enforcement fail so consistently in practice?"
+- "What's really driving the AI price war?"
+- "Analyze this platform's ecosystem position from multiple angles"
+- "用三向分析一下" / "深度分析一下当下的就业形势"
+
+**Skip it for** factual questions, debugging, summaries, or anything a single source answers.
+
+---
+
+## What You Get (Example Output)
+
+A real analysis of "Why did DeepSeek announce a price hike while demand was exploding?" produces this shape:
+
+```
+深度声明：Standard · 复杂度域 Complex
+
+【暴露靶子】默认立场："涨价 = 纯供需调节"（待攻击）
+【核心发现】涨价预告未执行 + 公告后需求创新高（8.9T/日峰值）
+  → 不是降压工具，而是"叙事动作 + 资源重配信号"
+【多镜共识】博弈（预告=期权）/ 制度（口径=信号）/ 物理（97%缓存=算力紧）
+【置信度】中——"预告不执行"是事实（高），"动机归因"是解释（中）
+【修订痕迹】反证"8/4服务降级=危机反应"被评估：无法排除 → 动机归因降级
+【分层影响】系统（价格体系重锚）/ 制度（开发者成本结构）/ 个体（囤积行为）
+【盲点】内部训练数据不可见；竞争对手反应未覆盖
+```
+
+Every analysis carries this shape: **priors exposed → facts gathered → multi-lens cross-validation → confidence calibrated → revisions from adversarial attack recorded** — so you can see *what was challenged* and *what survived*, not just the polished conclusion.
+
+---
+
+## How It Works
+
+1. **Trigger Guard** — complexity check: is this a structural question or a simple fact?
+2. **Attack Loop (every run)** — expose the analyst's default stance, list counter-evidence *before* gathering facts, then run an adversarial pass before delivery. Intensity is adjustable: "轻一点" (gentle) / "狠一点" (ruthless).
+3. **Five Phases** — Decompose → Research (web search, mandatory for current events) → Multi-lens Analysis → Structural Tools → Synthesis.
+4. **推演四查 (Four Deduction Checks)** — competing-hypothesis exclusion, second-order effects, physical anchoring, global-south variables, plus the coexistence check (default: things stay as they are; change needs explicit triggers).
+5. **Quality Standards** — every claim fact-bound; confidence graded (high = 2+ independent sources with opposing stances); numbers carry source & scope; no false balance on power asymmetries.
+
+## Key Features
+
+- **16 lenses** across Foundation / Human / Structure / Material categories
+- **10 structural tools** (三向, MLSD, Asymmetry Detection, Incentive Mapping, Strategic Interaction, Reflexivity, ...)
+- **Attack-loop protocol** — the analyst's own priors are exposed and attacked before delivery (not a gimmick: it emerged from adversarial review of this very skill)
+- **Trauma-sensitive standard** — for harm-related topics: no false balance, no "understand the other side" demands on victims
+- **Gotchas** — 9 empirically-verified failure modes (comfort-zone lens selection, dropped history lens, over-fitted signal decoding, ...)
+- **Behavior-verified** — the framework was pruned 590→219 lines based on real-usage trace evidence; the full decision chain is in `docs/behavioral-experiment.md`
+
 ## Quick Install
 
 Place the entire directory in your OpenCode skills folder:
 - Windows: `%USERPROFILE%\.config\opencode\skills\deep-structural-analysis\`
 - macOS/Linux: `~/.config/opencode/skills/deep-structural-analysis/`
 
-## What It Does
-
-Five-phase analysis (Decompose → Research → Multi-lens Analysis → Structural Tools → Synthesis) producing stratified, fact-bound, confidence-calibrated conclusions. Core mechanisms: Trigger Guard, attack loop (prior exposure), 推演四查 (4 deduction checks), confidence/quantity/balance standards.
-
-## Key Features
-
-- 16 lenses across Foundation/Human/Structure/Material categories
-- 10 structural tools (三向, MLSD, Asymmetry Detection, Incentive Mapping, etc.)
-- Fact-binding requirement per lens
-- Web-search grounding (mandatory for current events/data questions)
-- **Note**: Chinese lens/tool names are canonical in zh output mode
+Trigger by asking for depth: "深度分析…", "从多个角度…", "用三向…", or "泼冷水/挑刺/反驳我" (adversarial review mode).
 
 ## Configuration
 
@@ -30,12 +76,16 @@ Five-phase analysis (Decompose → Research → Multi-lens Analysis → Structur
 
 ## Files
 
-- `SKILL.md` — core framework (execution)
+- `SKILL.md` — core framework (execution, 219 lines)
 - `docs/depth-reference.md` — full theory for 三向 & MLSD (reference)
-- `docs/behavioral-experiment.md` — maintenance decision chain
-- `docs/attack-survivors.md` — metacognitive reference
+- `docs/behavioral-experiment.md` — maintenance decision chain (validation boundaries)
+- `docs/attack-survivors.md` — metacognitive reference (what survives attack)
 - `docs/case-test-archive.md` — case & test archive (maintenance)
 
 ## Version
 
 v1.9.0 — see `docs/UPDATELOG.md` for full history (authoritative).
+
+## License
+
+[MIT](LICENSE)
