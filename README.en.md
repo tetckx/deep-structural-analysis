@@ -26,23 +26,28 @@ The result is stratified, fact-bound, confidence-calibrated analysis — with bl
 
 ## What You Get (Example Output)
 
-A real analysis of "Why did DeepSeek announce a price hike while demand was exploding?" produces this shape:
+A real analysis of "Why do city metros keep losing money yet keep expanding?" (example · analyzed 2026-08-08) produces this shape:
 
 ```
 Depth: Standard · Complexity domain: Complex
 
-[PRIOR EXPOSED] Default stance: "Price hike = pure supply-demand adjustment" (to be attacked)
-[CORE FINDING] Announcement without execution + demand hit new high after it (8.9T/day peak)
-  → Not a demand-reduction tool, but a "narrative move + resource-reallocation signal"
-[CROSS-LENS CONSENSUS] Game theory (announcement = option) / Institutional (wording = signal)
-  / Physical (97% cache hit = compute tightness)
-[CONFIDENCE] Medium — "announcement not executed" is fact (high), "motive attribution"
-  is interpretation (medium)
-[REVISION TRACE] Counter-evidence "8/4 service degradation = crisis response" assessed:
-  cannot be ruled out → motive attribution downgraded
-[LAYERED IMPACT] System (pricing re-anchoring) / Institutional (developer cost structure)
-  / Individual (hoarding behavior)
-[BLIND SPOTS] Internal training data invisible; competitor responses not covered
+[PRIOR EXPOSED] Default stance: "Persistent metro losses = expansion should stop"
+  (to be attacked)
+[CORE FINDING] "Loss" is an accounting artifact (high depreciation + statutory
+  public-service fares); expansion's hidden benefits (land value uplift, urban
+  density, commute costs) never appear on the books
+  → a mismatch between the loss narrative and full-cost accounting — not a
+  "should we build" question at all
+[CROSS-LENS CONSENSUS] Economics (accounting basis vs full-cost) / Institutional
+  (statutory fare pricing) / Physical (ridership-density constraints)
+[CONFIDENCE] Medium — "accounting basis" is fact (high), "hidden benefits drive
+  decisions" is interpretation (medium)
+[REVISION TRACE] Counter-evidence "local debt pressure should halt expansion"
+  assessed: debt constraint is real but partly offset by land-sale revenue
+  → "halt" downgraded to "slow the pace"
+[LAYERED IMPACT] System (urban sprawl pattern) / Institutional (subsidy mechanism)
+  / Individual (commuter costs)
+[BLIND SPOTS] Local fiscal details invisible; shrinking-city cases not covered
 ```
 
 Every analysis carries this shape: **priors exposed → facts gathered → multi-lens cross-validation → confidence calibrated → revisions from adversarial attack recorded** — so you can see *what was challenged* and *what survived*, not just the polished conclusion.
