@@ -2,7 +2,7 @@
 
 **Read this in other languages:** [:cn: 简体中文](README.md)
 
-[![Version](https://img.shields.io/badge/version-1.9.0-green.svg)](SKILL.md) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.9.1-green.svg)](SKILL.md) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 > Multi-perspective structural analysis skill for complex social, economic, philosophical, and systemic questions. **Chinese primary** — developed and stress-tested with Chinese corpora; Chinese output quality exceeds English.
 
@@ -69,7 +69,7 @@ Every analysis carries this shape: **priors exposed → facts gathered → multi
 - **Attack-loop protocol** — the analyst's own priors are exposed and attacked before delivery (not a gimmick: it emerged from adversarial review of this very skill)
 - **Trauma-sensitive standard** — for harm-related topics: no false balance, no "understand the other side" demands on victims
 - **Gotchas** — 9 empirically-verified failure modes (comfort-zone lens selection, dropped history lens, over-fitted signal decoding, ...)
-- **Behavior-verified** — the framework was pruned 590→219 lines based on real-usage trace evidence; the full decision chain is in `docs/behavioral-experiment.md`
+- **Behavior-verified** — the framework was pruned 590→216 lines based on real-usage trace evidence (now 351 lines after post-1.9.0 additions); the full decision chain is in `docs/behavioral-experiment.md`
 
 ## Quick Install
 
@@ -85,7 +85,7 @@ No external config file — **output language follows the user's question langua
 
 ## Files
 
-- `SKILL.md` — core framework (execution, 219 lines)
+- `SKILL.md` — core framework (execution, 353 lines)
 - `docs/depth-reference.md` — full theory for 三向 & MLSD (reference)
 - `docs/behavioral-experiment.md` — maintenance decision chain (validation boundaries)
 - `docs/attack-survivors.md` — metacognitive reference (what survives attack)
@@ -93,7 +93,7 @@ No external config file — **output language follows the user's question langua
 
 ## Version
 
-v1.9.0 — see `docs/UPDATELOG.md` for full history (authoritative).
+v1.9.1 — see `docs/UPDATELOG.md` for full history (authoritative).
 
 ## License
 
