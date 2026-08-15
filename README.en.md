@@ -2,7 +2,7 @@
 
 **Read this in other languages:** [:cn: 简体中文](README.md)
 
-[![Version](https://img.shields.io/badge/version-1.9.4-green.svg)](SKILL.md) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.9.5-green.svg)](SKILL.md) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 > Multi-perspective structural analysis skill for complex social, economic, philosophical, and systemic questions. **Chinese primary** — developed and stress-tested with Chinese corpora; Chinese output quality exceeds English.
 
@@ -96,7 +96,7 @@ No external config file — **output language follows the user's question langua
 
 ## Version
 
-v1.9.4 — see `docs/UPDATELOG.md` for full history (authoritative).
+v1.9.5 — see `docs/UPDATELOG.md` for full history (authoritative).
 
 ## License
 

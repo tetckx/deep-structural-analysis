@@ -15,8 +15,7 @@ description: >-
 
 <!--
 Author: happy_chen
-版本策略与完整版本链见 `docs/UPDATELOG.md`（版本历史唯一权威——正文不保留版本标注）。
-本文件为行为实验精简版：凡实战输出中留下行为证据的机制保留原文；无行为证据或不可验证的机制已删除/压缩。验证依据：docs/attack-survivors.md + docs/behavioral-experiment.md（维护记录）。
+版本策略与维护流程见 docs/UPDATELOG.md（版本历史唯一权威）与 docs/maintenance.md。
 -->
 
 # Deep Structural Analysis

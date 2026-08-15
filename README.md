@@ -2,9 +2,9 @@
 
 **Read this in other languages:** [:us: English](README.en.md)
 
-![Version](https://img.shields.io/badge/version-1.9.4-green.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Version](https://img.shields.io/badge/version-1.9.5-green.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-> 跨学科深度结构分析技能。当前版本 **v1.9.4** · 渐进式架构 · 16透镜4类别 · 10核心工具 · 立场切换发现引擎 + 攻击循环协议 + 推演四查 + 行为实验精简。
+> 跨学科深度结构分析技能。当前版本 **v1.9.5** · 渐进式架构 · 16透镜4类别 · 10核心工具 · 立场切换发现引擎 + 攻击循环协议 + 推演四查 + 行为实验精简。
 
 ## 它是什么
 
@@ -85,7 +85,7 @@ Foundation：认识论/系统论/历史/时间性 · Human：心理学/社会学
 
 ## 版本
 
-v1.9.4——完整版本链见 `docs/UPDATELOG.md`（版本历史唯一权威）。
+v1.9.5——完整版本链见 `docs/UPDATELOG.md`（版本历史唯一权威）。
 
 ## 许可证
 
