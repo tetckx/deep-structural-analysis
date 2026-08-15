@@ -2,7 +2,7 @@
 
 **Read this in other languages:** [:cn: 简体中文](README.md)
 
-[![Version](https://img.shields.io/badge/version-1.9.1-green.svg)](SKILL.md) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.9.3-green.svg)](SKILL.md) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 > Multi-perspective structural analysis skill for complex social, economic, philosophical, and systemic questions. **Chinese primary** — developed and stress-tested with Chinese corpora; Chinese output quality exceeds English.
 
@@ -85,7 +85,7 @@ No external config file — **output language follows the user's question langua
 
 ## Files
 
-- `SKILL.md` — core framework (execution, 353 lines)
+- `SKILL.md` — core framework (execution, 379 lines)
 - `docs/depth-reference.md` — full theory for 三向 & MLSD (reference)
 - `docs/behavioral-experiment.md` — maintenance decision chain (validation boundaries)
 - `docs/attack-survivors.md` — metacognitive reference (what survives attack)
@@ -93,7 +93,7 @@ No external config file — **output language follows the user's question langua
 
 ## Version
 
-v1.9.1 — see `docs/UPDATELOG.md` for full history (authoritative).
+v1.9.3 — see `docs/UPDATELOG.md` for full history (authoritative).
 
 ## License
 
