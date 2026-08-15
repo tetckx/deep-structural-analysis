@@ -2,9 +2,9 @@
 
 **Read this in other languages:** [:us: English](README.en.md)
 
-![Version](https://img.shields.io/badge/version-1.9.3-green.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Version](https://img.shields.io/badge/version-1.9.4-green.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-> 跨学科深度结构分析技能。当前版本 **v1.9.3** · 渐进式架构 · 16透镜4类别 · 10核心工具 · 立场切换发现引擎 + 攻击循环协议 + 推演四查 + 行为实验精简。
+> 跨学科深度结构分析技能。当前版本 **v1.9.4** · 渐进式架构 · 16透镜4类别 · 10核心工具 · 立场切换发现引擎 + 攻击循环协议 + 推演四查 + 行为实验精简。
 
 ## 它是什么
 
@@ -45,9 +45,12 @@
 
 ## 快速开始
 
-放置整个目录到 OpenCode skills 文件夹：
-- Windows: `%USERPROFILE%\.config\opencode\skills\deep-structural-analysis\`
-- macOS/Linux: `~/.config/opencode/skills/deep-structural-analysis/`
+本 skill 为标准 SKILL.md 格式（目录 + SKILL.md + references/），可安装到任何兼容 SKILL.md 技能的 agent 环境：
+
+- **OpenCode**：Windows `%USERPROFILE%\.config\opencode\skills\deep-structural-analysis\`；macOS/Linux `~/.config/opencode/skills/deep-structural-analysis/`
+- **DeepSeek Harness（DSH）**：复制到项目 `.agents/skills/deep-structural-analysis/`（或用户级 skills 目录）
+- **Claude Code 等 SKILL.md 兼容环境**：复制到对应环境的 skills 目录（如 `~/.claude/skills/`）
+- **其他环境**：任何按"目录 + SKILL.md"约定加载技能的 agent 均可直接使用
 
 ## 核心机制
 
@@ -82,7 +85,7 @@ Foundation：认识论/系统论/历史/时间性 · Human：心理学/社会学
 
 ## 版本
 
-v1.9.3——完整版本链见 `docs/UPDATELOG.md`（版本历史唯一权威）。
+v1.9.4——完整版本链见 `docs/UPDATELOG.md`（版本历史唯一权威）。
 
 ## 许可证
 

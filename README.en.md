@@ -2,7 +2,7 @@
 
 **Read this in other languages:** [:cn: 简体中文](README.md)
 
-[![Version](https://img.shields.io/badge/version-1.9.3-green.svg)](SKILL.md) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.9.4-green.svg)](SKILL.md) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 > Multi-perspective structural analysis skill for complex social, economic, philosophical, and systemic questions. **Chinese primary** — developed and stress-tested with Chinese corpora; Chinese output quality exceeds English.
 
@@ -73,9 +73,12 @@ Every analysis carries this shape: **priors exposed → facts gathered → multi
 
 ## Quick Install
 
-Place the entire directory in your OpenCode skills folder:
-- Windows: `%USERPROFILE%\.config\opencode\skills\deep-structural-analysis\`
-- macOS/Linux: `~/.config/opencode/skills/deep-structural-analysis/`
+This skill uses the standard SKILL.md format (directory + SKILL.md + references/) and installs into any agent environment that loads skills by that convention:
+
+- **OpenCode**: Windows `%USERPROFILE%\.config\opencode\skills\deep-structural-analysis\`; macOS/Linux `~/.config/opencode/skills/deep-structural-analysis/`
+- **DeepSeek Harness (DSH)**: copy to the project `.agents/skills/deep-structural-analysis/` (or the user-level skills directory)
+- **Claude Code / other SKILL.md-compatible environments**: copy to that environment's skills directory (e.g. `~/.claude/skills/`)
+- **Any environment** that loads skills by the "directory + SKILL.md" convention works as-is.
 
 Trigger by asking for depth: "深度分析…", "从多个角度…", "用三向…", or "泼冷水/挑刺/反驳我" (adversarial review mode).
 
@@ -93,7 +96,7 @@ No external config file — **output language follows the user's question langua
 
 ## Version
 
-v1.9.3 — see `docs/UPDATELOG.md` for full history (authoritative).
+v1.9.4 — see `docs/UPDATELOG.md` for full history (authoritative).
 
 ## License
 
