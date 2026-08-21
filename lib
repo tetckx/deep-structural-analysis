@@ -1,0 +1,21 @@
+import { createRequire } from 'node:module';
+import { dirname, join } from 'node:path';
+
+export const name = 'deep-structural-analysis-skill';
+export const PACKAGE_NAME = 'deep-structural-analysis-skill';
+
+export function resolveSkillRoot(profileBaseUrl) {
+  if (!profileBaseUrl) {
+    throw new Error('deep-structural-analysis-skill: missing DSH profile baseUrl for package resolution');
+  }
+  let manifestPath;
+  try {
+    manifestPath = createRequire(profileBaseUrl).resolve(`${PACKAGE_NAME}/package.json`);
+  } catch (error) {
+    throw new Error(
+      `deep-structural-analysis-skill: cannot resolve ${PACKAGE_NAME}/package.json from the DSH profile`,
+      { cause: error },
+    );
+  }
+  return join(dirname(manifestPath), 'skills');
+}

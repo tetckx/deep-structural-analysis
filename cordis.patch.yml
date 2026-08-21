@@ -1,0 +1,10 @@
+# Opt-in deep-structural-analysis filesystem Skill provider for DeepSeek Harness.
+# Resolves the packaged Skill root from the installed npm identity anchored at
+# the DSH profile (Loader baseUrl), never as a path concatenated onto baseUrl.
+- insert:
+    - id: deep-structural-analysis-skill-filesystem
+      name: '@deepseek-ai/dsh-skill-filesystem'
+      config:
+        providerName: deep-structural-analysis
+        includeDefaultRoots: false
+        bundledSkillDir: !!js process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('deep-structural-analysis-skill/package.json')), 'skills')

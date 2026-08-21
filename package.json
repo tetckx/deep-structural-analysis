@@ -1,0 +1,44 @@
+{
+  "name": "deep-structural-analysis-skill",
+  "version": "1.9.5",
+  "description": "Opt-in DeepSeek Harness Skill-only bundle for the deep-structural-analysis multi-lens structural analysis skill.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "skills",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "agent-skill",
+    "structural-analysis",
+    "multi-lens"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tetckx/deep-structural-analysis-skill.git"
+  },
+  "homepage": "https://github.com/tetckx/deep-structural-analysis-skill",
+  "bugs": "https://github.com/tetckx/deep-structural-analysis-skill/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
